@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Eye, Mail, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Eye, Mail, Palette, Award } from 'lucide-react';
 
 const Designs = () => {
   const fadeInUp = {
@@ -16,10 +16,12 @@ const Designs = () => {
       description: "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
       type: "Infographic Design",
       year: "2024",
+      client: "Personal Project",
       images: [
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=800"
       ],
-      featured: true
+      featured: true,
+      color: "bg-yellow-100"
     },
     {
       id: 2,
@@ -27,10 +29,12 @@ const Designs = () => {
       description: "Traditional festival greeting card design celebrating Ganesh Chaturthi with beautiful ornate patterns, warm colors, and cultural elements. Features Lord Ganesha with traditional decorative elements and festive atmosphere.",
       type: "Festival Design",
       year: "2024",
+      client: "Cultural Project",
       images: [
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=800"
       ],
-      featured: true
+      featured: true,
+      color: "bg-orange-100"
     },
     {
       id: 3,
@@ -38,37 +42,39 @@ const Designs = () => {
       description: "Heartwarming Father's Day card design with modern illustration style, featuring father-child bonding theme with paper airplanes, hearts, and floral elements on a beautiful gradient background.",
       type: "Greeting Card",
       year: "2024",
+      client: "Personal Project",
       images: [
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=800"
       ],
-      featured: false
+      featured: false,
+      color: "bg-blue-100"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-dark-bg">
-      {/* Navigation - Smoothbot style */}
-      <nav className="fixed top-0 w-full nav-dark z-50">
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full nav-clean z-50">
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="font-heading font-bold text-2xl text-white tracking-wider hover:scale-105 transition-transform"
+              className="font-heading font-bold text-xl text-foreground hover:scale-105 transition-transform"
             >
-              UJJWAL
+              Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="font-body text-text-secondary hover:text-white transition-colors uppercase text-sm tracking-wide">Home</Link>
-              <Link to="/websites" className="font-body text-text-secondary hover:text-white transition-colors uppercase text-sm tracking-wide">Websites</Link>
-              <Link to="/designs" className="font-body text-orange-500 font-medium uppercase text-sm tracking-wide">Designs</Link>
-              <ChevronDown className="w-4 h-4 text-text-secondary" />
+              <Link to="/" className="font-body text-muted-foreground hover:text-foreground transition-colors">Home</Link>
+              <Link to="/websites" className="font-body text-muted-foreground hover:text-foreground transition-colors">Websites</Link>
+              <Link to="/designs" className="font-body text-primary font-semibold">Designs</Link>
+              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">Get In Touch</a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6">
+      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-primary/5 to-purple-50">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -78,7 +84,7 @@ const Designs = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-text-secondary hover:text-white transition-colors font-body card-dark px-4 py-2 rounded-xl text-sm uppercase tracking-wide"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body card-clean px-4 py-2 text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -91,26 +97,51 @@ const Designs = () => {
             animate="animate"
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-orange-500/10 text-orange-500 px-6 py-3 rounded-full mb-8 border border-orange-500/20">
-              <Eye className="w-5 h-5" />
-              <span className="font-body font-medium uppercase text-sm tracking-wide">Figma Specialist</span>
+            <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full mb-8 border border-primary/20">
+              <Palette className="w-5 h-5" />
+              <span className="font-body font-medium">Figma Design Specialist</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-7xl font-light mb-6 text-white text-balance leading-tight">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
               Design Portfolio
             </h1>
-            <p className="font-body text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed text-balance">
+            <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
               A showcase of visual design work specializing in Figma designs, spanning branding, user interfaces, and digital experiences.
-              Each project tells a unique story through thoughtful design decisions.
+              Each project tells a unique story through thoughtful design decisions and modern visual aesthetics.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Projects Gallery */}
-      <section className="pb-24 px-6">
+      {/* Featured Stats */}
+      <section className="py-16 px-6 bg-white border-b">
         <div className="content-center">
-          <div className="space-y-24 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "50+", label: "Projects Completed" },
+              { number: "3", label: "Design Categories" },
+              { number: "100%", label: "Client Satisfaction" },
+              { number: "2024", label: "Current Year" }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Gallery */}
+      <section className="section-spacing px-6">
+        <div className="content-center">
+          <div className="space-y-24 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -118,42 +149,59 @@ const Designs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="grid lg:grid-cols-2 gap-16 items-center"
               >
+                {/* Project Image */}
+                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                  <div className="card-clean overflow-hidden card-hover">
+                    <div className={`${project.color} p-8`}>
+                      <img
+                        src={project.images[0]}
+                        alt={project.title}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 {/* Project Info */}
-                <div className="text-center space-y-6">
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                   {project.featured && (
-                    <div className="inline-block bg-orange-500/10 text-orange-500 px-4 py-2 rounded-full border border-orange-500/20">
-                      <span className="font-body font-medium uppercase text-sm tracking-wide">Featured Project</span>
+                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
+                      <Award className="w-4 h-4" />
+                      <span className="font-body font-medium text-sm">Featured Project</span>
                     </div>
                   )}
                   
-                  <div className="flex items-center justify-center gap-4 text-sm font-body text-text-muted uppercase tracking-wide">
+                  <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
                     <span className="flex items-center gap-2">
                       <Eye className="w-4 h-4" />
                       {project.type}
                     </span>
                     <span>•</span>
                     <span>{project.year}</span>
+                    <span>•</span>
+                    <span>{project.client}</span>
                   </div>
                   
-                  <h2 className="font-heading text-4xl md:text-5xl font-light text-white text-balance leading-tight">
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-balance leading-tight">
                     {project.title}
                   </h2>
                   
-                  <p className="font-body text-lg text-text-secondary leading-relaxed max-w-3xl mx-auto text-balance">
+                  <p className="font-body text-lg text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
-                </div>
 
-                {/* Design Display */}
-                <div className="card-dark p-8 card-hover">
-                  <div className="bg-gray-900/50 rounded-xl p-4">
-                    <img
-                      src={project.images[0]}
-                      alt={project.title}
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                      Figma Design
+                    </span>
+                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                      Visual Design
+                    </span>
+                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                      Brand Identity
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -162,39 +210,100 @@ const Designs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-spacing px-6">
+      {/* Skills Section */}
+      <section className="section-spacing px-6 bg-secondary">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center mb-16"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-white text-balance">
-              Let's Create Something Amazing
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+              Design Expertise
             </h2>
-            <p className="font-body text-xl text-text-secondary mb-8 leading-relaxed text-balance">
-              Ready to bring your design ideas to life? I specialize in creating stunning Figma designs
-              that captivate audiences and deliver results.
+            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Specialized skills and tools that bring creative visions to life
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Figma Mastery",
+                description: "Advanced proficiency in Figma for creating stunning designs, prototypes, and design systems.",
+                skills: ["UI/UX Design", "Prototyping", "Design Systems", "Component Libraries"]
+              },
+              {
+                title: "Visual Design",
+                description: "Creating compelling visual narratives through typography, color theory, and composition.",
+                skills: ["Brand Identity", "Logo Design", "Print Design", "Digital Illustrations"]
+              },
+              {
+                title: "User Experience",
+                description: "Designing user-centered experiences that are both beautiful and functional.",
+                skills: ["User Research", "Wireframing", "User Journey Mapping", "Accessibility"]
+              }
+            ].map((skill, index) => (
+              <motion.div
+                key={skill.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-clean p-6 card-hover"
+              >
+                <h3 className="font-heading text-xl font-bold mb-3">{skill.title}</h3>
+                <p className="font-body text-muted-foreground mb-4 leading-relaxed">
+                  {skill.description}
+                </p>
+                <ul className="space-y-2">
+                  {skill.skills.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="font-body text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-spacing px-6 bg-primary text-white">
+        <div className="content-center text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6 text-balance">
+              Ready to Bring Your Vision to Life?
+            </h2>
+            <p className="font-body text-xl text-white/90 mb-12 leading-relaxed text-balance max-w-3xl mx-auto">
+              Let's collaborate to create stunning designs that tell your story and engage your audience. 
+              From concept to completion, I'll help you achieve your creative goals.
             </p>
             <a
               href="mailto:ujjwalt616@gmail.com"
-              className="inline-flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl font-body font-medium transition-all duration-300 hover:bg-orange-600 hover:scale-105 card-hover uppercase tracking-wide text-sm"
+              className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <Eye className="w-5 h-5" />
-              Start a Project
+              <Mail className="w-5 h-5" />
+              Start Your Design Project
             </a>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-dark-border">
+      <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
-          <p className="font-body text-text-muted text-sm">
-            © 2024 Ujjwal Tiwari. Crafted with precision and passion.
+          <p className="font-body text-muted-foreground">
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
           </p>
         </div>
       </footer>
