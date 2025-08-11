@@ -324,7 +324,7 @@ const Index = () => {
                   <service.icon className="w-8 h-8 text-white" />
                 </motion.div>
 
-                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10">
+                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10 text-white">
                   {service.title}
                 </h3>
                 <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6 relative z-10">
@@ -348,7 +348,7 @@ const Index = () => {
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
-                      <span className="font-body text-foreground">
+                      <span className="font-body text-white">
                         {feature}
                       </span>
                     </motion.li>
