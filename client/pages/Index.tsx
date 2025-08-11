@@ -220,7 +220,7 @@ const Index = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="block"
               >
-                We Create
+                Liquid Glass
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
