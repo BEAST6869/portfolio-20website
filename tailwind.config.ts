@@ -47,15 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Minimalist colors
-        neutral: {
-          50: "hsl(var(--neutral-50))",
-          100: "hsl(var(--neutral-100))",
-          500: "hsl(var(--neutral-500))",
-          900: "hsl(var(--neutral-900))",
+        // Smoothbot color palette
+        dark: {
+          bg: "hsl(var(--dark-bg))",
+          card: "hsl(var(--card-bg))",
+          border: "hsl(var(--card-border))",
         },
-        blue: {
-          600: "hsl(var(--blue-600))",
+        text: {
+          primary: "hsl(var(--text-primary))",
+          secondary: "hsl(var(--text-secondary))",
+          muted: "hsl(var(--text-muted))",
+        },
+        orange: {
+          500: "hsl(var(--orange-accent))",
         },
       },
       borderRadius: {
