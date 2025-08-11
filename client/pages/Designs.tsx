@@ -14,7 +14,7 @@ const Designs = () => {
       id: 1,
       title: "Flipkart Startup Story",
       description:
-        "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
+        "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with clean modern theme and engaging visual elements including founders, product categories, and company milestones.",
       type: "Infographic Design",
       year: "2024",
       client: "Personal Project",
