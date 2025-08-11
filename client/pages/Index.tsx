@@ -100,8 +100,8 @@ const Index = () => {
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="font-heading font-bold text-xl text-white"
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              className="font-heading font-bold text-xl text-white shimmer"
             >
               Ujjwal Tiwari
             </motion.div>
