@@ -217,7 +217,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3">
+      <section id="services" className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3 relative">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
