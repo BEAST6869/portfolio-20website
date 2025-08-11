@@ -100,7 +100,7 @@ const Index = () => {
               className="font-body text-xl md:text-2xl text-text-secondary mb-16 max-w-3xl mx-auto leading-relaxed text-balance"
             >
               Pioneers crafting the future of digital design
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
