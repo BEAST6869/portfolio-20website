@@ -106,7 +106,7 @@ const Designs = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center gap-3 gradient-purple-blue text-white px-6 py-3 rounded-full mb-8 pulse-glow"
+              className="inline-flex items-center gap-3 glass-dark text-white px-6 py-3 rounded-full mb-8 pulse-glow"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
