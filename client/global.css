@@ -58,73 +58,86 @@
   }
 
   body {
-    @apply text-foreground;
-    font-family: 'Space Grotesk', sans-serif;
-    background: linear-gradient(135deg,
-      hsl(var(--gradient-start)),
-      hsl(var(--gradient-middle)),
-      hsl(var(--gradient-end))
-    );
-    background-attachment: fixed;
-    min-height: 100vh;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.875rem;
     font-weight: 600;
   }
 
   .font-heading {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   .font-body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    body {
+      font-size: 1rem;
+    }
   }
 }
 
 @layer utilities {
-  /* Glassmorphism utilities */
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Minimalist utilities */
+  .card-subtle {
+    background: white;
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
-  .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
-                0 0 0 1px rgba(255, 255, 255, 0.05);
+  .card-hover {
+    transition: all 0.3s ease;
   }
 
-  .glass-nav {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(30px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
-  .glow-purple {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  .section-spacing {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  .text-balance {
+    text-wrap: balance;
   }
 
-  .glow-pink {
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
-  }
-
-  .text-gradient {
-    background: linear-gradient(135deg, #8b5cf6, #06b6d4, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .border-gradient {
-    border-image: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(6, 182, 212, 0.3), rgba(236, 72, 153, 0.3)) 1;
+  .content-center {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
