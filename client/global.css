@@ -2,62 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   /**
-   * Glassmorphism dark theme with liquid glass effects
-   * Based on dark purple/blue gradients with glass aesthetics
+   * Clean, minimalist design system
+   * Based on neutral colors with professional typography
    */
   :root {
-    /* Base dark theme */
-    --background: 240 10% 8%;  /* Very dark blue-gray */
-    --foreground: 0 0% 95%; /* Almost white text */
+    /* Base light theme - Clean & Minimal */
+    --background: 249 250 251; /* #F9FAFB - off-white */
+    --foreground: 17 24 39; /* #111827 - dark gray */
 
-    --card: 240 15% 12% / 0.7; /* Semi-transparent dark cards */
-    --card-foreground: 0 0% 95%;
+    --card: 255 255 255; /* Pure white cards */
+    --card-foreground: 17 24 39;
 
-    --popover: 240 15% 12% / 0.9;
-    --popover-foreground: 0 0% 95%;
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
 
-    /* Primary colors - electric purple/blue */
-    --primary: 270 100% 65%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Calm blue accent */
+    --primary: 37 99 235; /* #2563EB - calm blue */
+    --primary-foreground: 255 255 255;
 
-    /* Secondary - glass effect */
-    --secondary: 240 15% 15% / 0.5;
-    --secondary-foreground: 0 0% 90%;
+    /* Secondary - Muted grays */
+    --secondary: 243 244 246; /* #F3F4F6 - light neutral gray */
+    --secondary-foreground: 75 85 99; /* #4B5563 - muted gray */
 
-    --muted: 240 10% 20% / 0.3;
-    --muted-foreground: 0 0% 70%;
+    --muted: 243 244 246;
+    --muted-foreground: 75 85 99;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 37 99 235;
+    --accent-foreground: 255 255 255;
 
-    --destructive: 0 100% 65%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
 
-    --border: 240 15% 25% / 0.3;
-    --input: 240 15% 15% / 0.5;
-    --ring: 270 100% 65%;
+    --border: 229 231 235; /* Light gray borders */
+    --input: 229 231 235;
+    --ring: 37 99 235;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    /* Custom glassmorphism colors */
-    --glass-dark: 240 15% 12% / 0.1;
-    --glass-medium: 240 15% 15% / 0.2;
-    --glass-light: 240 15% 20% / 0.3;
-    --glass-border: 240 15% 30% / 0.2;
-
-    /* Gradient colors */
-    --gradient-start: 240 100% 20%;
-    --gradient-middle: 270 100% 25%;
-    --gradient-end: 300 100% 30%;
-
-    /* Accent colors */
-    --purple-glow: 270 100% 65%;
-    --blue-glow: 240 100% 70%;
-    --pink-glow: 320 100% 70%;
+    /* Custom minimalist colors */
+    --neutral-50: 249 250 251; /* #F9FAFB */
+    --neutral-100: 243 244 246; /* #F3F4F6 */
+    --neutral-500: 75 85 99; /* #4B5563 */
+    --neutral-900: 17 24 39; /* #111827 */
+    --blue-600: 37 99 235; /* #2563EB */
   }
 }
 
