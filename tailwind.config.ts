@@ -47,21 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom portfolio colors
-        cream: {
-          50: "hsl(var(--cream-50))",
-          100: "hsl(var(--cream-100))",
-          200: "hsl(var(--cream-200))",
+        // Glassmorphism colors
+        glass: {
+          dark: "hsl(var(--glass-dark))",
+          medium: "hsl(var(--glass-medium))",
+          light: "hsl(var(--glass-light))",
+          border: "hsl(var(--glass-border))",
         },
-        sage: {
-          100: "hsl(var(--sage-100))",
-          200: "hsl(var(--sage-200))",
-          300: "hsl(var(--sage-300))",
-        },
-        slate: {
-          600: "hsl(var(--slate-600))",
-          700: "hsl(var(--slate-700))",
-          800: "hsl(var(--slate-800))",
+        glow: {
+          purple: "hsl(var(--purple-glow))",
+          blue: "hsl(var(--blue-glow))",
+          pink: "hsl(var(--pink-glow))",
         },
       },
       borderRadius: {
