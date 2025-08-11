@@ -218,7 +218,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="block text-glass-dark"
+                className="text-white/90 block text-glow"
               >
                 We Create
               </motion.span>
