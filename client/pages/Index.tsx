@@ -429,11 +429,11 @@ const Index = () => {
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
                       index === 0
-                        ? "bg-yellow-500 text-white"
+                        ? "glass-white text-white"
                         : index === 1
-                          ? "bg-orange-500 text-white"
-                          : "bg-blue-500 text-white"
-                    } rounded-full text-sm font-medium mb-3`}
+                          ? "glass-medium text-white"
+                          : "glass-dark text-white"
+                    } rounded-full text-sm font-medium mb-3 backdrop-blur-md border border-white/20`}
                   >
                     {work.category}
                   </motion.span>
