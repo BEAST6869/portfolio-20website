@@ -349,7 +349,7 @@ const Index = () => {
               Whether you have a project in mind or just want to say hello, I'd love to hear from you.
             </p>
             <a
-              href="mailto:hello@alexchen.dev"
+              href="mailto:ujjwalt616@gmail.com"
               className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105"
             >
               Get In Touch
