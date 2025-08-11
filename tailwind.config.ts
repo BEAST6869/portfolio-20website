@@ -47,17 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Glassmorphism colors
-        glass: {
-          dark: "hsl(var(--glass-dark))",
-          medium: "hsl(var(--glass-medium))",
-          light: "hsl(var(--glass-light))",
-          border: "hsl(var(--glass-border))",
+        // Minimalist colors
+        neutral: {
+          50: "hsl(var(--neutral-50))",
+          100: "hsl(var(--neutral-100))",
+          500: "hsl(var(--neutral-500))",
+          900: "hsl(var(--neutral-900))",
         },
-        glow: {
-          purple: "hsl(var(--purple-glow))",
-          blue: "hsl(var(--blue-glow))",
-          pink: "hsl(var(--pink-glow))",
+        blue: {
+          600: "hsl(var(--blue-600))",
         },
       },
       borderRadius: {
