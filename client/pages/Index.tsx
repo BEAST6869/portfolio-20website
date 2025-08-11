@@ -21,22 +21,6 @@ const Index = () => {
     websites: [
       {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "A modern e-commerce solution built with React and Node.js",
-        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
-        tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-        liveUrl: "#"
-      },
-      {
-        id: 2,
-        title: "SaaS Dashboard",
-        description: "Analytics dashboard with real-time data visualization",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-        tech: ["Vue.js", "D3.js", "Express", "MongoDB"],
-        liveUrl: "#"
-      },
-      {
-        id: 3,
         title: "Portfolio Website",
         description: "Personal portfolio showcasing creative work and development projects",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
@@ -47,24 +31,24 @@ const Index = () => {
     designs: [
       {
         id: 1,
-        title: "Brand Identity - TechStart",
-        description: "Complete brand identity design for a technology startup",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
-        type: "Branding"
+        title: "Flipkart Startup Story",
+        description: "Creative infographic design showcasing Flipkart's journey as a startup success story",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=400",
+        type: "Figma Design"
       },
       {
         id: 2,
-        title: "Mobile App UI",
-        description: "Clean and intuitive user interface for a fitness tracking app",
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-        type: "UI/UX Design"
+        title: "Ganesh Chaturthi Greeting",
+        description: "Traditional festival greeting card with ornate patterns and cultural elements",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=400",
+        type: "Figma Design"
       },
       {
         id: 3,
-        title: "Website Redesign",
-        description: "Modern redesign for a local restaurant's online presence",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-        type: "Web Design"
+        title: "Father's Day Greeting Card",
+        description: "Heartwarming Father's Day card with modern illustration style",
+        image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=400",
+        type: "Figma Design"
       }
     ]
   };
