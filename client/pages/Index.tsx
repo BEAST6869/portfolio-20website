@@ -463,8 +463,45 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-spacing px-6 bg-surface-2">
-        <div className="content-center">
+      <section
+        id="about"
+        className="section-spacing px-6 hero-bg relative overflow-hidden"
+      >
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl float"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-black/5 rounded-full blur-3xl float-delayed"></div>
+        </div>
+
+        <div className="content-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-white"
+            >
+              About Me
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="font-body text-xl text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              Creating digital excellence through thoughtful design and
+              development
+            </motion.p>
+          </motion.div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -472,28 +509,33 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h3 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-balance text-white">
                 Creating Digital Excellence
-              </h2>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+              </h3>
+              <p className="font-body text-lg text-white/90 leading-relaxed mb-6">
                 I specialize in bridging the gap between design and development,
                 creating digital experiences that are both visually stunning and
                 technically robust. With expertise in Figma design and modern
                 web technologies, I help brands tell their stories through
                 thoughtful digital solutions.
               </p>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="font-body text-lg text-white/90 leading-relaxed mb-8">
                 From initial concept to final deployment, I ensure every project
                 is crafted with attention to detail, user experience, and
                 performance optimization.
               </p>
-              <a
+              <motion.a
                 href="mailto:ujjwalt616@gmail.com"
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.95 }}
                 className="btn-primary inline-flex items-center gap-2"
               >
                 <Mail className="w-5 h-5" />
                 Let's Work Together
-              </a>
+              </motion.a>
             </motion.div>
 
             <motion.div
@@ -501,50 +543,80 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="card-clean p-8"
+              className="card-clean p-8 card-hover relative overflow-hidden group"
             >
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="space-y-6 relative z-10">
+                <motion.div
+                  className="flex items-center gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    className="w-12 h-12 glass-dark rounded-xl flex items-center justify-center float"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     <Palette className="w-6 h-6 text-white" />
-                  </div>
+                  </motion.div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">
+                    <h4 className="font-heading text-lg font-semibold text-white">
                       Design Expertise
-                    </h3>
-                    <p className="text-muted-foreground">
+                    </h4>
+                    <p className="text-white/80">
                       Figma specialist with 50+ projects
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                <motion.div
+                  className="flex items-center gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    className="w-12 h-12 glass-dark rounded-xl flex items-center justify-center float"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    style={{ animationDelay: "0.5s" }}
+                  >
                     <Code className="w-6 h-6 text-white" />
-                  </div>
+                  </motion.div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">
+                    <h4 className="font-heading text-lg font-semibold text-white">
                       Development Skills
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Modern React & TypeScript
-                    </p>
+                    </h4>
+                    <p className="text-white/80">Modern React & TypeScript</p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                <motion.div
+                  className="flex items-center gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    className="w-12 h-12 glass-dark rounded-xl flex items-center justify-center float"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    style={{ animationDelay: "1s" }}
+                  >
                     <Star className="w-6 h-6 text-white" />
-                  </div>
+                  </motion.div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">
+                    <h4 className="font-heading text-lg font-semibold text-white">
                       Quality Focused
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Pixel-perfect execution
-                    </p>
+                    </h4>
+                    <p className="text-white/80">Pixel-perfect execution</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
