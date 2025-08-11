@@ -1,54 +1,57 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Eye, Mail, Palette, Award } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowLeft, Eye, Mail, Palette, Award } from "lucide-react";
 
 const Designs = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   };
 
   const projects = [
     {
       id: 1,
       title: "Flipkart Startup Story",
-      description: "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
+      description:
+        "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
       type: "Infographic Design",
       year: "2024",
       client: "Personal Project",
       images: [
-        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=800"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=800",
       ],
       featured: true,
-      color: "bg-yellow-100"
+      color: "bg-yellow-100",
     },
     {
       id: 2,
       title: "Ganesh Chaturthi Greeting",
-      description: "Traditional festival greeting card design celebrating Ganesh Chaturthi with beautiful ornate patterns, warm colors, and cultural elements. Features Lord Ganesha with traditional decorative elements and festive atmosphere.",
+      description:
+        "Traditional festival greeting card design celebrating Ganesh Chaturthi with beautiful ornate patterns, warm colors, and cultural elements. Features Lord Ganesha with traditional decorative elements and festive atmosphere.",
       type: "Festival Design",
       year: "2024",
       client: "Cultural Project",
       images: [
-        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=800"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=800",
       ],
       featured: true,
-      color: "bg-orange-100"
+      color: "bg-orange-100",
     },
     {
       id: 3,
       title: "Father's Day Greeting Card",
-      description: "Heartwarming Father's Day card design with modern illustration style, featuring father-child bonding theme with paper airplanes, hearts, and floral elements on a beautiful gradient background.",
+      description:
+        "Heartwarming Father's Day card design with modern illustration style, featuring father-child bonding theme with paper airplanes, hearts, and floral elements on a beautiful gradient background.",
       type: "Greeting Card",
       year: "2024",
       client: "Personal Project",
       images: [
-        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=800"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=800",
       ],
       featured: false,
-      color: "bg-blue-100"
-    }
+      color: "bg-blue-100",
+    },
   ];
 
   return (
@@ -64,10 +67,27 @@ const Designs = () => {
               Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="font-body text-muted-foreground hover:text-foreground transition-colors">Home</Link>
-              <Link to="/websites" className="font-body text-muted-foreground hover:text-foreground transition-colors">Websites</Link>
-              <Link to="/designs" className="font-body text-primary font-semibold">Designs</Link>
-              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">Get In Touch</a>
+              <Link
+                to="/"
+                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/websites"
+                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Websites
+              </Link>
+              <Link
+                to="/designs"
+                className="font-body text-primary font-semibold"
+              >
+                Designs
+              </Link>
+              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>
@@ -114,7 +134,9 @@ const Designs = () => {
               >
                 <Palette className="w-5 h-5" />
               </motion.div>
-              <span className="font-body font-medium">Figma Design Specialist</span>
+              <span className="font-body font-medium">
+                Figma Design Specialist
+              </span>
             </motion.div>
 
             <motion.h1
@@ -131,8 +153,10 @@ const Designs = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance"
             >
-              A showcase of visual design work specializing in Figma designs, spanning branding, user interfaces, and digital experiences.
-              Each project tells a unique story through thoughtful design decisions and modern visual aesthetics.
+              A showcase of visual design work specializing in Figma designs,
+              spanning branding, user interfaces, and digital experiences. Each
+              project tells a unique story through thoughtful design decisions
+              and modern visual aesthetics.
             </motion.p>
           </motion.div>
         </div>
@@ -146,7 +170,7 @@ const Designs = () => {
               { number: "50+", label: "Projects Completed" },
               { number: "3", label: "Design Categories" },
               { number: "100%", label: "Client Satisfaction" },
-              { number: "2024", label: "Current Year" }
+              { number: "2024", label: "Current Year" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -155,8 +179,12 @@ const Designs = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-muted-foreground font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -177,7 +205,7 @@ const Designs = () => {
                 className="grid lg:grid-cols-2 gap-16 items-center"
               >
                 {/* Project Image */}
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="card-clean overflow-hidden card-hover">
                     <div className={`${project.color} p-8`}>
                       <img
@@ -190,14 +218,18 @@ const Designs = () => {
                 </div>
 
                 {/* Project Info */}
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div
+                  className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                >
                   {project.featured && (
                     <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
                       <Award className="w-4 h-4" />
-                      <span className="font-body font-medium text-sm">Featured Project</span>
+                      <span className="font-body font-medium text-sm">
+                        Featured Project
+                      </span>
                     </div>
                   )}
-                  
+
                   <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
                     <span className="flex items-center gap-2">
                       <Eye className="w-4 h-4" />
@@ -208,11 +240,11 @@ const Designs = () => {
                     <span>•</span>
                     <span>{project.client}</span>
                   </div>
-                  
+
                   <h2 className="font-heading text-3xl md:text-4xl font-bold text-balance leading-tight">
                     {project.title}
                   </h2>
-                  
+
                   <p className="font-body text-lg text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
@@ -257,19 +289,37 @@ const Designs = () => {
             {[
               {
                 title: "Figma Mastery",
-                description: "Advanced proficiency in Figma for creating stunning designs, prototypes, and design systems.",
-                skills: ["UI/UX Design", "Prototyping", "Design Systems", "Component Libraries"]
+                description:
+                  "Advanced proficiency in Figma for creating stunning designs, prototypes, and design systems.",
+                skills: [
+                  "UI/UX Design",
+                  "Prototyping",
+                  "Design Systems",
+                  "Component Libraries",
+                ],
               },
               {
                 title: "Visual Design",
-                description: "Creating compelling visual narratives through typography, color theory, and composition.",
-                skills: ["Brand Identity", "Logo Design", "Print Design", "Digital Illustrations"]
+                description:
+                  "Creating compelling visual narratives through typography, color theory, and composition.",
+                skills: [
+                  "Brand Identity",
+                  "Logo Design",
+                  "Print Design",
+                  "Digital Illustrations",
+                ],
               },
               {
                 title: "User Experience",
-                description: "Designing user-centered experiences that are both beautiful and functional.",
-                skills: ["User Research", "Wireframing", "User Journey Mapping", "Accessibility"]
-              }
+                description:
+                  "Designing user-centered experiences that are both beautiful and functional.",
+                skills: [
+                  "User Research",
+                  "Wireframing",
+                  "User Journey Mapping",
+                  "Accessibility",
+                ],
+              },
             ].map((skill, index) => (
               <motion.div
                 key={skill.title}
@@ -279,7 +329,9 @@ const Designs = () => {
                 viewport={{ once: true }}
                 className="card-clean p-6 card-hover"
               >
-                <h3 className="font-heading text-xl font-bold mb-3">{skill.title}</h3>
+                <h3 className="font-heading text-xl font-bold mb-3">
+                  {skill.title}
+                </h3>
                 <p className="font-body text-muted-foreground mb-4 leading-relaxed">
                   {skill.description}
                 </p>
@@ -310,8 +362,9 @@ const Designs = () => {
               Ready to Bring Your Vision to Life?
             </h2>
             <p className="font-body text-xl text-white/90 mb-12 leading-relaxed text-balance max-w-3xl mx-auto">
-              Let's collaborate to create stunning designs that tell your story and engage your audience. 
-              From concept to completion, I'll help you achieve your creative goals.
+              Let's collaborate to create stunning designs that tell your story
+              and engage your audience. From concept to completion, I'll help
+              you achieve your creative goals.
             </p>
             <a
               href="mailto:ujjwalt616@gmail.com"
@@ -328,7 +381,8 @@ const Designs = () => {
       <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
-            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
+            precision.
           </p>
         </div>
       </footer>

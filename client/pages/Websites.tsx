@@ -1,48 +1,78 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Code2, Mail, Zap, Globe, Smartphone } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Code2,
+  Mail,
+  Zap,
+  Globe,
+  Smartphone,
+} from "lucide-react";
 
 const Websites = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   };
 
   const projects = [
     {
       id: 1,
       title: "Portfolio Website",
-      description: "Personal portfolio showcasing creative work and development projects. Features smooth animations, responsive design, and optimized performance. Built with modern React patterns and styled with Tailwind CSS for a clean, minimal aesthetic that focuses on user experience and accessibility.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+      description:
+        "Personal portfolio showcasing creative work and development projects. Features smooth animations, responsive design, and optimized performance. Built with modern React patterns and styled with Tailwind CSS for a clean, minimal aesthetic that focuses on user experience and accessibility.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true,
       category: "Personal Project",
-      year: "2024"
-    }
+      year: "2024",
+    },
   ];
 
   const technologies = [
     {
       category: "Frontend Development",
       icon: Globe,
-      description: "Modern frontend technologies for exceptional user experiences",
-      items: ["React & Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive Design"]
+      description:
+        "Modern frontend technologies for exceptional user experiences",
+      items: [
+        "React & Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Responsive Design",
+      ],
     },
     {
       category: "Performance & SEO",
       icon: Zap,
       description: "Optimized for speed, search engines, and user engagement",
-      items: ["Core Web Vitals", "SEO Optimization", "Lighthouse Scores", "Bundle Optimization", "CDN Integration"]
+      items: [
+        "Core Web Vitals",
+        "SEO Optimization",
+        "Lighthouse Scores",
+        "Bundle Optimization",
+        "CDN Integration",
+      ],
     },
     {
       category: "Development Tools",
       icon: Code2,
       description: "Professional development workflow and best practices",
-      items: ["Git Version Control", "CI/CD Pipelines", "Testing Frameworks", "Code Quality Tools", "Documentation"]
-    }
+      items: [
+        "Git Version Control",
+        "CI/CD Pipelines",
+        "Testing Frameworks",
+        "Code Quality Tools",
+        "Documentation",
+      ],
+    },
   ];
 
   return (
@@ -58,10 +88,27 @@ const Websites = () => {
               Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="font-body text-muted-foreground hover:text-foreground transition-colors">Home</Link>
-              <Link to="/websites" className="font-body text-primary font-semibold">Websites</Link>
-              <Link to="/designs" className="font-body text-muted-foreground hover:text-foreground transition-colors">Designs</Link>
-              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">Get In Touch</a>
+              <Link
+                to="/"
+                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/websites"
+                className="font-body text-primary font-semibold"
+              >
+                Websites
+              </Link>
+              <Link
+                to="/designs"
+                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Designs
+              </Link>
+              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>
@@ -93,15 +140,18 @@ const Websites = () => {
           >
             <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full mb-8 border border-primary/20">
               <Code2 className="w-5 h-5" />
-              <span className="font-body font-medium">Full-Stack Developer</span>
+              <span className="font-body font-medium">
+                Full-Stack Developer
+              </span>
             </div>
-            
+
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
               Web Development
             </h1>
             <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
-              Creating modern, performant websites and web applications using cutting-edge technologies. 
-              Every project is built with scalability, accessibility, and user experience in mind.
+              Creating modern, performant websites and web applications using
+              cutting-edge technologies. Every project is built with
+              scalability, accessibility, and user experience in mind.
             </p>
           </motion.div>
         </div>
@@ -115,7 +165,7 @@ const Websites = () => {
               { number: "100%", label: "Mobile Responsive" },
               { number: "A+", label: "Lighthouse Score" },
               { number: "99%", label: "Uptime Guarantee" },
-              { number: "24/7", label: "Support Available" }
+              { number: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -124,8 +174,12 @@ const Websites = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-muted-foreground font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -150,7 +204,9 @@ const Websites = () => {
                   <div className="text-center">
                     <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full border border-primary/20">
                       <Zap className="w-5 h-5" />
-                      <span className="font-body font-medium">Featured Project</span>
+                      <span className="font-body font-medium">
+                        Featured Project
+                      </span>
                     </div>
                   </div>
                 )}
@@ -181,7 +237,7 @@ const Websites = () => {
                       <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight">
                         {project.title}
                       </h2>
-                      
+
                       <p className="font-body text-lg text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
@@ -189,7 +245,9 @@ const Websites = () => {
 
                     {/* Tech Stack */}
                     <div>
-                      <h3 className="font-heading text-lg font-semibold mb-4">Technologies Used</h3>
+                      <h3 className="font-heading text-lg font-semibold mb-4">
+                        Technologies Used
+                      </h3>
                       <div className="flex flex-wrap gap-3">
                         {project.tech.map((tech) => (
                           <span
@@ -241,7 +299,8 @@ const Websites = () => {
               Development Expertise
             </h2>
             <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Leveraging modern technologies and best practices to deliver exceptional web experiences
+              Leveraging modern technologies and best practices to deliver
+              exceptional web experiences
             </p>
           </motion.div>
 
@@ -258,7 +317,9 @@ const Websites = () => {
                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-3">{tech.category}</h3>
+                <h3 className="font-heading text-xl font-bold mb-3">
+                  {tech.category}
+                </h3>
                 <p className="font-body text-muted-foreground mb-6 leading-relaxed">
                   {tech.description}
                 </p>
@@ -296,10 +357,30 @@ const Websites = () => {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Discovery", description: "Understanding your goals, target audience, and technical requirements" },
-              { step: "02", title: "Planning", description: "Creating detailed project roadmap, wireframes, and technical architecture" },
-              { step: "03", title: "Development", description: "Building with modern technologies, testing, and optimization" },
-              { step: "04", title: "Launch", description: "Deployment, performance monitoring, and ongoing support" }
+              {
+                step: "01",
+                title: "Discovery",
+                description:
+                  "Understanding your goals, target audience, and technical requirements",
+              },
+              {
+                step: "02",
+                title: "Planning",
+                description:
+                  "Creating detailed project roadmap, wireframes, and technical architecture",
+              },
+              {
+                step: "03",
+                title: "Development",
+                description:
+                  "Building with modern technologies, testing, and optimization",
+              },
+              {
+                step: "04",
+                title: "Launch",
+                description:
+                  "Deployment, performance monitoring, and ongoing support",
+              },
             ].map((phase, index) => (
               <motion.div
                 key={phase.step}
@@ -312,7 +393,9 @@ const Websites = () => {
                 <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
                   {phase.step}
                 </div>
-                <h3 className="font-heading text-lg font-bold mb-3">{phase.title}</h3>
+                <h3 className="font-heading text-lg font-bold mb-3">
+                  {phase.title}
+                </h3>
                 <p className="font-body text-muted-foreground leading-relaxed text-sm">
                   {phase.description}
                 </p>
@@ -335,8 +418,9 @@ const Websites = () => {
               Ready to Build Your Next Project?
             </h2>
             <p className="font-body text-xl text-white/90 mb-12 leading-relaxed text-balance max-w-3xl mx-auto">
-              Let's create a modern, performant website that drives results. From concept to deployment, 
-              I'll handle every aspect of your web development needs.
+              Let's create a modern, performant website that drives results.
+              From concept to deployment, I'll handle every aspect of your web
+              development needs.
             </p>
             <a
               href="mailto:ujjwalt616@gmail.com"
@@ -353,7 +437,8 @@ const Websites = () => {
       <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
-            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
+            precision.
           </p>
         </div>
       </footer>

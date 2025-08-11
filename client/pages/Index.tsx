@@ -1,97 +1,125 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Github, Mail, Award, Star, Users, Code, Palette } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  ExternalLink,
+  Github,
+  Mail,
+  Award,
+  Star,
+  Users,
+  Code,
+  Palette,
+} from "lucide-react";
 
 const Index = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
   const slideInLeft = {
     initial: { opacity: 0, x: -60 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
   const slideInRight = {
     initial: { opacity: 0, x: 60 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
   const scaleIn = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }
+    transition: { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
   const staggerContainer = {
     animate: {
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const rotateIn = {
     initial: { opacity: 0, rotate: -10, scale: 0.8 },
     animate: { opacity: 1, rotate: 0, scale: 1 },
-    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+    transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
   const awards = [
     { icon: Award, text: "Top Rated Designer" },
     { icon: Star, text: "5.0 Rating" },
     { icon: Users, text: "50+ Projects" },
-    { icon: Code, text: "Modern Stack" }
+    { icon: Code, text: "Modern Stack" },
   ];
 
   const services = [
     {
       icon: Palette,
       title: "Figma Design",
-      description: "Creating stunning visual designs that tell compelling stories and drive engagement through thoughtful user experience.",
-      features: ["Brand Identity", "UI/UX Design", "Prototyping", "Design Systems"]
+      description:
+        "Creating stunning visual designs that tell compelling stories and drive engagement through thoughtful user experience.",
+      features: [
+        "Brand Identity",
+        "UI/UX Design",
+        "Prototyping",
+        "Design Systems",
+      ],
     },
     {
       icon: Code,
-      title: "Web Development", 
-      description: "Building modern, performant websites and applications using cutting-edge technologies and best practices.",
-      features: ["React Development", "TypeScript", "Responsive Design", "Performance Optimization"]
-    }
+      title: "Web Development",
+      description:
+        "Building modern, performant websites and applications using cutting-edge technologies and best practices.",
+      features: [
+        "React Development",
+        "TypeScript",
+        "Responsive Design",
+        "Performance Optimization",
+      ],
+    },
   ];
 
   const featuredWork = [
     {
       title: "Flipkart Startup Story",
       category: "Infographic Design",
-      description: "Creative visual storytelling showcasing the journey of India's largest e-commerce platform.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=600",
-      link: "/designs"
+      description:
+        "Creative visual storytelling showcasing the journey of India's largest e-commerce platform.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=600",
+      link: "/designs",
     },
     {
       title: "Festival Greeting Cards",
       category: "Visual Design",
-      description: "Traditional and modern greeting card designs for various cultural celebrations.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=600",
-      link: "/designs"
+      description:
+        "Traditional and modern greeting card designs for various cultural celebrations.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=600",
+      link: "/designs",
     },
     {
       title: "Portfolio Website",
       category: "Web Development",
-      description: "Modern, responsive portfolio showcasing creative work with smooth animations.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-      link: "/websites"
-    }
+      description:
+        "Modern, responsive portfolio showcasing creative work with smooth animations.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      link: "/websites",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <motion.nav 
+      <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -106,10 +134,27 @@ const Index = () => {
               Ujjwal Tiwari
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="font-body text-white/80 hover:text-white transition-colors">Services</a>
-              <a href="#about" className="font-body text-white/80 hover:text-white transition-colors">About</a>
-              <a href="#work" className="font-body text-white/80 hover:text-white transition-colors">Work</a>
-              <a href="#contact" className="btn-primary">Get In Touch</a>
+              <a
+                href="#services"
+                className="font-body text-white/80 hover:text-white transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#about"
+                className="font-body text-white/80 hover:text-white transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#work"
+                className="font-body text-white/80 hover:text-white transition-colors"
+              >
+                Work
+              </a>
+              <a href="#contact" className="btn-primary">
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>
@@ -142,16 +187,16 @@ const Index = () => {
                   transition={{
                     duration: 0.8,
                     delay: 0.6 + index * 0.15,
-                    ease: [0.6, -0.05, 0.01, 0.99]
+                    ease: [0.6, -0.05, 0.01, 0.99],
                   }}
                   whileHover={{
                     scale: 1.2,
                     rotate: 10,
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                   className="awards-badge rounded-full p-3 float pulse-glow"
                   style={{
-                    animationDelay: `${index * 0.5}s`
+                    animationDelay: `${index * 0.5}s`,
                   }}
                 >
                   <award.icon className="w-6 h-6 text-white" />
@@ -186,7 +231,7 @@ const Index = () => {
                 Digital Leaders
               </motion.span>
             </motion.h1>
-            
+
             <motion.p
               variants={fadeInUp}
               className="font-body text-xl md:text-2xl text-white/90 mb-16 max-w-2xl mx-auto leading-relaxed"
@@ -217,7 +262,10 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3 relative">
+      <section
+        id="services"
+        className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3 relative"
+      >
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -242,7 +290,8 @@ const Index = () => {
               viewport={{ once: true }}
               className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
-              Combining creative design with technical expertise to deliver exceptional digital experiences
+              Combining creative design with technical expertise to deliver
+              exceptional digital experiences
             </motion.p>
           </motion.div>
 
@@ -250,28 +299,34 @@ const Index = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 50, rotate: index % 2 === 0 ? -5 : 5 }}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                  rotate: index % 2 === 0 ? -5 : 5,
+                }}
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{
                   y: -10,
                   scale: 1.02,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="card-clean p-8 card-hover relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-gradient-purple/5 to-gradient-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <motion.div
-                  className={`w-16 h-16 ${index === 0 ? 'glass-dark' : 'glass-medium'} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
+                  className={`w-16 h-16 ${index === 0 ? "glass-dark" : "glass-medium"} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
                   <service.icon className="w-8 h-8 text-white" />
                 </motion.div>
 
-                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10">{service.title}</h3>
+                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10">
+                  {service.title}
+                </h3>
                 <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6 relative z-10">
                   {service.description}
                 </p>
@@ -281,7 +336,10 @@ const Index = () => {
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + featureIndex * 0.1 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.2 + featureIndex * 0.1,
+                      }}
                       viewport={{ once: true }}
                       className="flex items-center gap-3"
                     >
@@ -290,7 +348,9 @@ const Index = () => {
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
-                      <span className="font-body text-foreground">{feature}</span>
+                      <span className="font-body text-foreground">
+                        {feature}
+                      </span>
                     </motion.li>
                   ))}
                 </ul>
@@ -301,7 +361,10 @@ const Index = () => {
       </section>
 
       {/* Featured Work Section */}
-      <section id="work" className="section-spacing px-6 bg-gradient-to-br from-surface-2 to-surface-3 relative overflow-hidden">
+      <section
+        id="work"
+        className="section-spacing px-6 bg-gradient-to-br from-surface-2 to-surface-3 relative overflow-hidden"
+      >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-black/5 rounded-full blur-3xl float"></div>
@@ -332,7 +395,8 @@ const Index = () => {
               viewport={{ once: true }}
               className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
-              A selection of our best projects showcasing creativity and technical excellence
+              A selection of our best projects showcasing creativity and
+              technical excellence
             </motion.p>
           </motion.div>
 
@@ -348,7 +412,7 @@ const Index = () => {
                   y: -15,
                   scale: 1.03,
                   rotate: (index - 1) * 2,
-                  transition: { duration: 0.4 }
+                  transition: { duration: 0.4 },
                 }}
                 className="card-clean overflow-hidden card-hover group relative"
               >
@@ -369,14 +433,18 @@ const Index = () => {
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
-                      index === 0 ? 'glass-dark text-white' :
-                      index === 1 ? 'glass-medium text-white' :
-                      'glass-light text-white'
+                      index === 0
+                        ? "glass-dark text-white"
+                        : index === 1
+                          ? "glass-medium text-white"
+                          : "glass-light text-white"
                     } rounded-full text-sm font-medium mb-3`}
                   >
                     {work.category}
                   </motion.span>
-                  <h3 className="font-heading text-xl font-bold mb-3">{work.title}</h3>
+                  <h3 className="font-heading text-xl font-bold mb-3">
+                    {work.title}
+                  </h3>
                   <p className="font-body text-muted-foreground leading-relaxed mb-4">
                     {work.description}
                   </p>
@@ -413,20 +481,26 @@ const Index = () => {
                 Creating Digital Excellence
               </h2>
               <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
-                I specialize in bridging the gap between design and development, creating digital experiences 
-                that are both visually stunning and technically robust. With expertise in Figma design and 
-                modern web technologies, I help brands tell their stories through thoughtful digital solutions.
+                I specialize in bridging the gap between design and development,
+                creating digital experiences that are both visually stunning and
+                technically robust. With expertise in Figma design and modern
+                web technologies, I help brands tell their stories through
+                thoughtful digital solutions.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
-                From initial concept to final deployment, I ensure every project is crafted with attention 
-                to detail, user experience, and performance optimization.
+                From initial concept to final deployment, I ensure every project
+                is crafted with attention to detail, user experience, and
+                performance optimization.
               </p>
-              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary inline-flex items-center gap-2">
+              <a
+                href="mailto:ujjwalt616@gmail.com"
+                className="btn-primary inline-flex items-center gap-2"
+              >
                 <Mail className="w-5 h-5" />
                 Let's Work Together
               </a>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -440,28 +514,40 @@ const Index = () => {
                     <Palette className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">Design Expertise</h3>
-                    <p className="text-muted-foreground">Figma specialist with 50+ projects</p>
+                    <h3 className="font-heading text-lg font-semibold">
+                      Design Expertise
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Figma specialist with 50+ projects
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                     <Code className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">Development Skills</h3>
-                    <p className="text-muted-foreground">Modern React & TypeScript</p>
+                    <h3 className="font-heading text-lg font-semibold">
+                      Development Skills
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Modern React & TypeScript
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                     <Star className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold">Quality Focused</h3>
-                    <p className="text-muted-foreground">Pixel-perfect execution</p>
+                    <h3 className="font-heading text-lg font-semibold">
+                      Quality Focused
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Pixel-perfect execution
+                    </p>
                   </div>
                 </div>
               </div>
@@ -471,7 +557,10 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-spacing px-6 glass-dark text-white relative overflow-hidden">
+      <section
+        id="contact"
+        className="section-spacing px-6 glass-dark text-white relative overflow-hidden"
+      >
         {/* Animated background patterns */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent rotate-12 transform -translate-x-1/2"></div>
@@ -502,7 +591,8 @@ const Index = () => {
               viewport={{ once: true }}
               className="font-body text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              Let's discuss your project and bring your vision to life with exceptional design and development.
+              Let's discuss your project and bring your vision to life with
+              exceptional design and development.
             </motion.p>
             <motion.a
               href="mailto:ujjwalt616@gmail.com"
@@ -513,7 +603,7 @@ const Index = () => {
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0 20px 40px rgba(255, 255, 255, 0.3)",
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 glass-white text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 pulse-glow"
@@ -534,7 +624,8 @@ const Index = () => {
       <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
-            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
+            precision.
           </p>
         </div>
       </footer>
