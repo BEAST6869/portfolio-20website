@@ -363,7 +363,7 @@ const Index = () => {
       {/* Featured Work Section */}
       <section
         id="work"
-        className="section-spacing px-6 bg-gradient-to-br from-surface-2 to-surface-3 relative overflow-hidden"
+        className="section-spacing px-6 work-bg relative overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
