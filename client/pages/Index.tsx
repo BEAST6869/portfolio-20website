@@ -226,7 +226,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="text-gradient-rainbow block text-glow"
+                className="text-white/90 block text-glow"
               >
                 Digital Leaders
               </motion.span>
