@@ -143,8 +143,8 @@ const Designs = () => {
               <span className="block text-primary">Portfolio</span>
             </h1>
             <p className="font-body text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              A showcase of visual design work spanning branding, user interfaces, and digital experiences.
-              Each project tells a unique story through thoughtful design decisions.
+              A showcase of visual design work specializing in Figma designs, spanning branding, user interfaces, and digital experiences.
+              Each project tells a unique story through thoughtful design decisions and modern visual aesthetics.
             </p>
           </motion.div>
         </div>
