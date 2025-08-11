@@ -215,7 +215,7 @@ const Index = () => {
               </Link>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid gap-8 max-w-md mx-auto">
               {projects.websites.map((project, index) => (
                 <motion.div
                   key={project.id}
