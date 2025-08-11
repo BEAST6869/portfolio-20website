@@ -317,7 +317,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-gray-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <motion.div
-                  className={`w-16 h-16 ${index === 0 ? "glass-dark" : "glass-medium"} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
+                  className={`w-16 h-16 glass-dark rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -384,7 +384,7 @@ const Index = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-gradient-primary"
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-white"
             >
               Featured Work
             </motion.h2>
