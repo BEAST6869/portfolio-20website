@@ -187,12 +187,12 @@ const Designs = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: imageIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="group relative aspect-[4/3] bg-sage-100 rounded-2xl overflow-hidden shadow-lg"
+                      className="group relative bg-sage-100 rounded-2xl overflow-hidden shadow-lg"
                     >
                       <img
                         src={image}
                         alt={`${project.title} - Image ${imageIndex + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                     </motion.div>
                   ))}
