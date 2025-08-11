@@ -410,16 +410,16 @@
 @keyframes glass-shift {
   0%,
   100% {
-    filter: brightness(1) contrast(1);
+    filter: brightness(1) contrast(1) grayscale(1);
   }
   25% {
-    filter: brightness(1.1) contrast(1.1);
+    filter: brightness(1.1) contrast(1.1) grayscale(1);
   }
   50% {
-    filter: brightness(1) contrast(1);
+    filter: brightness(1) contrast(1) grayscale(1);
   }
   75% {
-    filter: brightness(0.9) contrast(0.9);
+    filter: brightness(0.9) contrast(0.9) grayscale(1);
   }
 }
 
