@@ -264,7 +264,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-gradient-purple/5 to-gradient-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <motion.div
-                  className={`w-16 h-16 ${index === 0 ? 'gradient-purple-blue' : 'gradient-blue-cyan'} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
+                  className={`w-16 h-16 ${index === 0 ? 'glass-dark' : 'glass-medium'} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
