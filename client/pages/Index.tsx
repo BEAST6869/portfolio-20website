@@ -362,7 +362,7 @@ const Index = () => {
       <footer className="py-12 px-6 border-t border-cream-200">
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-body text-slate-600">
-            © 2024 Alex Chen. Designed &amp; built with care.
+            © 2024 Ujjwal Tiwari. Designed &amp; built with care.
           </p>
         </div>
       </footer>
