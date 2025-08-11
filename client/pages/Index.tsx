@@ -437,7 +437,7 @@ const Index = () => {
                   >
                     {work.category}
                   </motion.span>
-                  <h3 className="font-heading text-xl font-bold mb-3">
+                  <h3 className="font-heading text-xl font-bold mb-3 text-white">
                     {work.title}
                   </h3>
                   <p className="font-body text-muted-foreground leading-relaxed mb-4">
@@ -445,14 +445,14 @@ const Index = () => {
                   </p>
                   <Link
                     to={work.link}
-                    className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all duration-300 group/link"
+                    className="inline-flex items-center gap-2 text-white font-medium hover:gap-4 transition-all duration-300 group/link"
                   >
                     View Project
                     <motion.div
                       whileHover={{ x: 5 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 text-white" />
                     </motion.div>
                   </Link>
                 </div>
