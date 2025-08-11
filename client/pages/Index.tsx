@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Github, Mail, Eye, Code2, ChevronDown } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github, Mail, Award, Star, Users, Code, Palette } from 'lucide-react';
 
 const Index = () => {
   const fadeInUp = {
@@ -17,253 +17,357 @@ const Index = () => {
     }
   };
 
-  const teamMembers = [
+  const awards = [
+    { icon: Award, text: "Top Rated Designer" },
+    { icon: Star, text: "5.0 Rating" },
+    { icon: Users, text: "50+ Projects" },
+    { icon: Code, text: "Modern Stack" }
+  ];
+
+  const services = [
     {
-      id: 1,
-      name: "Ujjwal",
-      role: "Designer & Developer",
-      description: "Crafting digital experiences with Figma designs and modern web development. Specializes in creating thoughtful interfaces that bridge creativity and functionality.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-      featured: true
+      icon: Palette,
+      title: "Figma Design",
+      description: "Creating stunning visual designs that tell compelling stories and drive engagement through thoughtful user experience.",
+      features: ["Brand Identity", "UI/UX Design", "Prototyping", "Design Systems"]
     },
     {
-      id: 2,
-      name: "Portfolio",
-      role: "Web Development",
-      description: "Modern portfolio showcasing creative work and development projects. Built with React, Tailwind CSS, and smooth animations for optimal user experience.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop",
-      featured: false
+      icon: Code,
+      title: "Web Development", 
+      description: "Building modern, performant websites and applications using cutting-edge technologies and best practices.",
+      features: ["React Development", "TypeScript", "Responsive Design", "Performance Optimization"]
+    }
+  ];
+
+  const featuredWork = [
+    {
+      title: "Flipkart Startup Story",
+      category: "Infographic Design",
+      description: "Creative visual storytelling showcasing the journey of India's largest e-commerce platform.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=600",
+      link: "/designs"
     },
     {
-      id: 3,
-      name: "Figma Designs",
-      role: "Visual Design",
-      description: "Collection of stunning visual designs created in Figma. From brand identities to user interfaces, each project tells a unique story.",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&h=200&fit=crop",
-      featured: false
+      title: "Festival Greeting Cards",
+      category: "Visual Design",
+      description: "Traditional and modern greeting card designs for various cultural celebrations.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=600",
+      link: "/designs"
     },
     {
-      id: 4,
-      name: "Projects",
-      role: "Full Stack",
-      description: "End-to-end digital solutions combining design thinking with technical expertise. Creating scalable applications that make a difference.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=200&fit=crop",
-      featured: false
+      title: "Portfolio Website",
+      category: "Web Development",
+      description: "Modern, responsive portfolio showcasing creative work with smooth animations.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      link: "/websites"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-dark-bg">
-      {/* Navigation - Exact smoothbot style */}
+    <div className="min-h-screen">
+      {/* Navigation */}
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="fixed top-0 w-full nav-dark z-50"
+        className="fixed top-0 w-full nav-transparent z-50"
       >
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="font-heading font-bold text-2xl text-white tracking-wider"
+              className="font-heading font-bold text-xl text-white"
             >
-              UJJWAL
+              Ujjwal Tiwari
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="font-body text-text-secondary hover:text-white transition-colors duration-300 uppercase text-sm tracking-wide">About</a>
-              <a href="#projects" className="font-body text-text-secondary hover:text-white transition-colors duration-300 uppercase text-sm tracking-wide">Projects</a>
-              <a href="#contact" className="font-body text-orange-500 font-medium uppercase text-sm tracking-wide">Contact</a>
-              <ChevronDown className="w-4 h-4 text-text-secondary" />
+              <a href="#services" className="font-body text-white/80 hover:text-white transition-colors">Services</a>
+              <a href="#about" className="font-body text-white/80 hover:text-white transition-colors">About</a>
+              <a href="#work" className="font-body text-white/80 hover:text-white transition-colors">Work</a>
+              <a href="#contact" className="btn-primary">Get In Touch</a>
             </div>
           </div>
         </div>
       </motion.nav>
 
-      {/* Hero Section - Smoothbot style */}
-      <section className="section-spacing pt-32 px-6">
-        <div className="content-center">
+      {/* Hero Section */}
+      <section className="hero-bg min-h-screen flex items-center justify-center px-6 relative">
+        <div className="content-center text-center">
+          {/* Awards Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-white/90 text-sm font-medium mb-6 tracking-wider uppercase">
+              #1 Most Recommended Designer & Developer
+            </p>
+            <div className="flex justify-center items-center gap-8 mb-8">
+              {awards.map((award, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  className="awards-badge rounded-full p-3"
+                >
+                  <award.icon className="w-6 h-6 text-white" />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
           <motion.div
             initial="initial"
             animate="animate"
             variants={staggerContainer}
-            className="text-center"
           >
             <motion.h1
               variants={fadeInUp}
-              className="font-heading text-6xl md:text-7xl font-light mb-6 text-white text-balance leading-tight"
+              className="font-heading text-6xl md:text-8xl font-bold text-hero mb-8 text-balance leading-tight"
             >
-              Creative Collective
+              We Create<br />
+              <span className="text-white">Digital Leaders</span>
             </motion.h1>
             
             <motion.p
               variants={fadeInUp}
-              className="font-body text-xl md:text-2xl text-text-secondary mb-16 max-w-3xl mx-auto leading-relaxed text-balance"
+              className="font-body text-xl md:text-2xl text-white/90 mb-16 max-w-2xl mx-auto leading-relaxed"
             >
-              Pioneers crafting the future of digital design
+              on every creative platform
             </motion.p>
+          </motion.div>
+
+          {/* Bottom Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="absolute bottom-12 left-6 right-6"
+          >
+            <div className="content-center flex justify-between items-end text-white/80 text-sm">
+              <div>
+                <p className="font-medium">Creative design & development</p>
+                <p>crafting digital experiences for modern brands</p>
+              </div>
+              <div className="text-right">
+                <p className="font-medium">2 Global Services</p>
+                <p>Design & Development</p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Team Cards Grid - Exact smoothbot layout */}
-      <section className="pb-20 px-6">
+      {/* Services Section */}
+      <section id="services" className="section-spacing px-6 bg-white">
         <div className="content-center">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {teamMembers.map((member, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance">
+              What We Do
+            </h2>
+            <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Combining creative design with technical expertise to deliver exceptional digital experiences
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-16">
+            {services.map((service, index) => (
               <motion.div
-                key={member.id}
+                key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="card-dark p-6 card-hover text-center"
+                className="card-clean p-8 card-hover"
               >
-                {/* Avatar */}
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full overflow-hidden border-2 border-dark-border">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-
-                {/* Name */}
-                <h3 className="font-heading text-2xl font-light text-white mb-2">
-                  {member.name}
-                </h3>
-
-                {/* Role */}
-                <p className="font-body text-text-secondary mb-6 text-sm">
-                  {member.role}
+                <h3 className="font-heading text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
+                  {service.description}
                 </p>
-
-                {/* Description */}
-                <p className="font-body text-text-muted leading-relaxed text-sm">
-                  {member.description}
-                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="font-body text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Designs Section */}
-      <section className="section-spacing px-6">
+      {/* Featured Work Section */}
+      <section id="work" className="section-spacing px-6 bg-secondary">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-white text-balance">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance">
               Featured Work
             </h2>
-            <div className="w-16 h-0.5 bg-orange-500 mx-auto"></div>
+            <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              A selection of our best projects showcasing creativity and technical excellence
+            </p>
           </motion.div>
 
-          {/* Figma Designs Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <div className="flex items-center justify-between mb-12">
-              <h3 className="font-heading text-2xl font-light text-white">Figma Designs</h3>
-              <Link
-                to="/designs"
-                className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 transition-colors font-body text-sm uppercase tracking-wide"
+          <div className="grid lg:grid-cols-3 gap-8">
+            {featuredWork.map((work, index) => (
+              <motion.div
+                key={work.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-clean overflow-hidden card-hover group"
               >
-                View All
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+                <div className="aspect-[4/3] bg-muted overflow-hidden">
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
+                    {work.category}
+                  </span>
+                  <h3 className="font-heading text-xl font-bold mb-3">{work.title}</h3>
+                  <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                    {work.description}
+                  </p>
+                  <Link
+                    to={work.link}
+                    className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                  >
+                    View Project
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="section-spacing px-6 bg-white">
+        <div className="content-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-balance">
+                Creating Digital Excellence
+              </h2>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+                I specialize in bridging the gap between design and development, creating digital experiences 
+                that are both visually stunning and technically robust. With expertise in Figma design and 
+                modern web technologies, I help brands tell their stories through thoughtful digital solutions.
+              </p>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
+                From initial concept to final deployment, I ensure every project is crafted with attention 
+                to detail, user experience, and performance optimization.
+              </p>
+              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary inline-flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                Let's Work Together
+              </a>
+            </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Flipkart Startup Story",
-                  description: "Creative infographic design showcasing journey",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=400",
-                  type: "Infographic"
-                },
-                {
-                  title: "Ganesh Chaturthi Greeting",
-                  description: "Traditional festival greeting with ornate patterns",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=400",
-                  type: "Festival Design"
-                },
-                {
-                  title: "Father's Day Greeting Card",
-                  description: "Heartwarming card with modern illustration",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=400",
-                  type: "Greeting Card"
-                }
-              ].map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="card-dark overflow-hidden card-hover"
-                >
-                  <div className="aspect-square bg-gray-900 p-4">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="card-clean p-8"
+            >
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                    <Palette className="w-6 h-6 text-white" />
                   </div>
-                  <div className="p-6">
-                    <span className="inline-block px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full text-xs font-body mb-3 uppercase tracking-wide">
-                      {project.type}
-                    </span>
-                    <h4 className="font-heading text-lg font-light text-white mb-2">{project.title}</h4>
-                    <p className="font-body text-text-muted text-sm leading-relaxed">{project.description}</p>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold">Design Expertise</h3>
+                    <p className="text-muted-foreground">Figma specialist with 50+ projects</p>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                    <Code className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold">Development Skills</h3>
+                    <p className="text-muted-foreground">Modern React & TypeScript</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold">Quality Focused</h3>
+                    <p className="text-muted-foreground">Pixel-perfect execution</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="section-spacing px-6">
-        <div className="content-center">
+      <section id="contact" className="section-spacing px-6 bg-primary text-white">
+        <div className="content-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-white text-balance">
-              Let's Collaborate
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance">
+              Ready to Create Something Amazing?
             </h2>
-            <p className="font-body text-xl text-text-secondary mb-8 leading-relaxed text-balance max-w-2xl mx-auto">
-              Ready to create something extraordinary? Let's connect and bring your vision to life.
+            <p className="font-body text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Let's discuss your project and bring your vision to life with exceptional design and development.
             </p>
             <a
               href="mailto:ujjwalt616@gmail.com"
-              className="inline-flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl font-body font-medium transition-all duration-300 hover:bg-orange-600 hover:scale-105 card-hover uppercase tracking-wide text-sm"
+              className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Mail className="w-5 h-5" />
-              Get In Touch
+              Start Your Project
             </a>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-dark-border">
+      <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
-          <p className="font-body text-text-muted text-sm">
-            © 2024 Ujjwal Tiwari. Crafted with precision and passion.
+          <p className="font-body text-muted-foreground">
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
           </p>
         </div>
       </footer>
