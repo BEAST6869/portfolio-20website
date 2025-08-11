@@ -463,7 +463,10 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-spacing px-6 hero-bg relative overflow-hidden">
+      <section
+        id="about"
+        className="section-spacing px-6 hero-bg relative overflow-hidden"
+      >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl float"></div>
@@ -494,7 +497,8 @@ const Index = () => {
               viewport={{ once: true }}
               className="font-body text-xl text-white/80 max-w-3xl mx-auto leading-relaxed"
             >
-              Creating digital excellence through thoughtful design and development
+              Creating digital excellence through thoughtful design and
+              development
             </motion.p>
           </motion.div>
 
@@ -579,7 +583,7 @@ const Index = () => {
                     className="w-12 h-12 glass-dark rounded-xl flex items-center justify-center float"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    style={{ animationDelay: '0.5s' }}
+                    style={{ animationDelay: "0.5s" }}
                   >
                     <Code className="w-6 h-6 text-white" />
                   </motion.div>
@@ -587,9 +591,7 @@ const Index = () => {
                     <h4 className="font-heading text-lg font-semibold text-white">
                       Development Skills
                     </h4>
-                    <p className="text-white/80">
-                      Modern React & TypeScript
-                    </p>
+                    <p className="text-white/80">Modern React & TypeScript</p>
                   </div>
                 </motion.div>
 
@@ -604,7 +606,7 @@ const Index = () => {
                     className="w-12 h-12 glass-dark rounded-xl flex items-center justify-center float"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
-                    style={{ animationDelay: '1s' }}
+                    style={{ animationDelay: "1s" }}
                   >
                     <Star className="w-6 h-6 text-white" />
                   </motion.div>
@@ -612,9 +614,7 @@ const Index = () => {
                     <h4 className="font-heading text-lg font-semibold text-white">
                       Quality Focused
                     </h4>
-                    <p className="text-white/80">
-                      Pixel-perfect execution
-                    </p>
+                    <p className="text-white/80">Pixel-perfect execution</p>
                   </div>
                 </motion.div>
               </div>
