@@ -125,7 +125,7 @@ const Index = () => {
         transition={{ duration: 0.6 }}
         className="fixed top-0 w-full nav-transparent z-50"
       >
-        <div className="content-center px-6 py-4">
+        <div className="content-center px-6 py-2">
           <div className="flex justify-between items-center">
             <motion.div
               whileHover={{ scale: 1.05, rotate: 1 }}
