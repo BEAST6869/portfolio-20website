@@ -81,7 +81,7 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="font-heading font-semibold text-slate-800 text-lg"
             >
-              Alex Chen
+              Ujjwal Tiwari
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
