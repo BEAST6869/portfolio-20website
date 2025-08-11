@@ -62,29 +62,28 @@
     font-size: 1rem;
     line-height: 1.6;
     letter-spacing: 0.01em;
-    background: hsl(var(--dark-bg));
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 300; /* Light weight like smoothbot */
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    font-weight: 700; /* Bold weight like Rise at Seven */
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
   h1 {
-    font-size: 4rem;
-    font-weight: 300;
+    font-size: 5rem;
+    font-weight: 800;
   }
 
   h2 {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 3rem;
+    font-weight: 700;
   }
 
   h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   .font-heading {
@@ -98,13 +97,13 @@
   /* Responsive typography */
   @media (max-width: 768px) {
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     body {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
   }
 }
