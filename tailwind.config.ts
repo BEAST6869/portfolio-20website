@@ -47,16 +47,28 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Rise at Seven color palette
+        // Enhanced color palette
         hero: {
           overlay: "hsl(var(--hero-overlay))",
           text: "hsl(var(--text-on-image))",
         },
-        orange: {
-          400: "hsl(var(--accent-orange))",
+        gradient: {
+          purple: "hsl(var(--gradient-purple))",
+          blue: "hsl(var(--gradient-blue))",
+          cyan: "hsl(var(--gradient-cyan))",
+          pink: "hsl(var(--gradient-pink))",
+          orange: "hsl(var(--gradient-orange))",
         },
-        warm: {
-          gray: "hsl(var(--warm-gray))",
+        accent: {
+          teal: "hsl(var(--accent-teal))",
+          emerald: "hsl(var(--accent-emerald))",
+          violet: "hsl(var(--accent-violet))",
+          rose: "hsl(var(--accent-rose))",
+        },
+        surface: {
+          1: "hsl(var(--surface-1))",
+          2: "hsl(var(--surface-2))",
+          3: "hsl(var(--surface-3))",
         },
       },
       borderRadius: {
