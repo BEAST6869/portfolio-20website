@@ -113,11 +113,11 @@
 }
 
 @layer utilities {
-  /* Minimalist utilities */
-  .card-subtle {
-    background: white;
-    border: 1px solid hsl(var(--border));
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  /* Smoothbot-inspired utilities */
+  .card-dark {
+    background: hsl(var(--card-bg));
+    border: 1px solid hsl(var(--card-border));
+    border-radius: 1rem;
   }
 
   .card-hover {
@@ -125,8 +125,8 @@
   }
 
   .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
+    border-color: hsl(var(--orange-accent) / 0.3);
   }
 
   .section-spacing {
@@ -142,5 +142,19 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .nav-dark {
+    background: rgba(16, 16, 16, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--card-border));
+  }
+
+  .text-muted {
+    color: hsl(var(--text-muted));
+  }
+
+  .text-secondary {
+    color: hsl(var(--text-secondary));
   }
 }
