@@ -468,7 +468,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-spacing px-6 bg-white">
+      <section id="about" className="section-spacing px-6 bg-surface-2">
         <div className="content-center">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -621,7 +621,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-white border-t">
+      <footer className="py-12 px-6 bg-surface-3 border-t border-border">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
