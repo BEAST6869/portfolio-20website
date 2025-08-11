@@ -115,7 +115,7 @@ const Websites = () => {
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -138,7 +138,7 @@ const Websites = () => {
             animate="animate"
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full mb-8 border border-primary/20">
+            <div className="inline-flex items-center gap-3 bg-black/10 text-black px-6 py-3 rounded-full mb-8 border border-black/20">
               <Code2 className="w-5 h-5" />
               <span className="font-body font-medium">
                 Full-Stack Developer
@@ -202,7 +202,7 @@ const Websites = () => {
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="text-center">
-                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full border border-primary/20">
+                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-6 py-3 rounded-full border border-black/20">
                       <Zap className="w-5 h-5" />
                       <span className="font-body font-medium">
                         Featured Project
@@ -214,7 +214,7 @@ const Websites = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   {/* Project Image */}
                   <div className="card-clean overflow-hidden card-hover">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex items-center justify-center">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center">
                       <img
                         src={project.image}
                         alt={project.title}

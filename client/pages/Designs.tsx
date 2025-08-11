@@ -14,7 +14,7 @@ const Designs = () => {
       id: 1,
       title: "Flipkart Startup Story",
       description:
-        "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
+        "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with clean modern theme and engaging visual elements including founders, product categories, and company milestones.",
       type: "Infographic Design",
       year: "2024",
       client: "Personal Project",
@@ -22,7 +22,7 @@ const Designs = () => {
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=800",
       ],
       featured: true,
-      color: "bg-yellow-100",
+      color: "bg-gray-100",
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ const Designs = () => {
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=800",
       ],
       featured: true,
-      color: "bg-orange-100",
+      color: "bg-gray-200",
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ const Designs = () => {
         "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=800",
       ],
       featured: false,
-      color: "bg-blue-100",
+      color: "bg-gray-300",
     },
   ];
 
@@ -222,7 +222,7 @@ const Designs = () => {
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
                   {project.featured && (
-                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
+                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-4 py-2 rounded-full border border-black/20">
                       <Award className="w-4 h-4" />
                       <span className="font-body font-medium text-sm">
                         Featured Project

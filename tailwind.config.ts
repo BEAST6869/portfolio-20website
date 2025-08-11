@@ -47,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Monochromatic glass palette
+        // Pure monochromatic palette
         hero: {
           overlay: "hsl(var(--hero-overlay))",
           text: "hsl(var(--text-on-image))",

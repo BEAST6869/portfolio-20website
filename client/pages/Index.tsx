@@ -262,10 +262,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section
-        id="services"
-        className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3 relative"
-      >
+      <section id="services" className="section-spacing px-6 hero-bg relative">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -279,7 +276,7 @@ const Index = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-gradient-primary"
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-white"
             >
               What We Do
             </motion.h2>
@@ -314,17 +311,17 @@ const Index = () => {
                 }}
                 className="card-clean p-8 card-hover relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-gradient-purple/5 to-gradient-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-gray-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <motion.div
-                  className={`w-16 h-16 ${index === 0 ? "glass-dark" : "glass-medium"} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
+                  className={`w-16 h-16 glass-dark rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
                   <service.icon className="w-8 h-8 text-white" />
                 </motion.div>
 
-                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10">
+                <h3 className="font-heading text-2xl font-bold mb-4 relative z-10 text-white">
                   {service.title}
                 </h3>
                 <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6 relative z-10">
@@ -348,9 +345,7 @@ const Index = () => {
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
-                      <span className="font-body text-foreground">
-                        {feature}
-                      </span>
+                      <span className="font-body text-white">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -363,7 +358,7 @@ const Index = () => {
       {/* Featured Work Section */}
       <section
         id="work"
-        className="section-spacing px-6 bg-gradient-to-br from-surface-2 to-surface-3 relative overflow-hidden"
+        className="section-spacing px-6 work-bg relative overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -384,7 +379,7 @@ const Index = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-gradient-primary"
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-white"
             >
               Featured Work
             </motion.h2>
@@ -416,7 +411,7 @@ const Index = () => {
                 }}
                 className="card-clean overflow-hidden card-hover group relative"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gradient-purple/20 to-gradient-blue/20 overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gradient-to-br from-black/20 to-gray-600/20 overflow-hidden relative">
                   <motion.img
                     src={work.image}
                     alt={work.title}
@@ -434,10 +429,10 @@ const Index = () => {
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
                       index === 0
-                        ? "glass-dark text-white"
+                        ? "bg-yellow-500 text-white"
                         : index === 1
-                          ? "glass-medium text-white"
-                          : "glass-light text-white"
+                          ? "bg-orange-500 text-white"
+                          : "bg-blue-500 text-white"
                     } rounded-full text-sm font-medium mb-3`}
                   >
                     {work.category}
@@ -450,7 +445,7 @@ const Index = () => {
                   </p>
                   <Link
                     to={work.link}
-                    className="inline-flex items-center gap-2 text-gradient-primary font-medium hover:gap-4 transition-all duration-300 group/link"
+                    className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all duration-300 group/link"
                   >
                     View Project
                     <motion.div
@@ -468,7 +463,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-spacing px-6 bg-white">
+      <section id="about" className="section-spacing px-6 bg-surface-2">
         <div className="content-center">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -621,7 +616,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-white border-t">
+      <footer className="py-12 px-6 bg-surface-3 border-t border-border">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
