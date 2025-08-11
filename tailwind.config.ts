@@ -47,28 +47,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Enhanced color palette
+        // Monochromatic glass palette
         hero: {
           overlay: "hsl(var(--hero-overlay))",
           text: "hsl(var(--text-on-image))",
         },
-        gradient: {
-          purple: "hsl(var(--gradient-purple))",
-          blue: "hsl(var(--gradient-blue))",
-          cyan: "hsl(var(--gradient-cyan))",
-          pink: "hsl(var(--gradient-pink))",
-          orange: "hsl(var(--gradient-orange))",
-        },
-        accent: {
-          teal: "hsl(var(--accent-teal))",
-          emerald: "hsl(var(--accent-emerald))",
-          violet: "hsl(var(--accent-violet))",
-          rose: "hsl(var(--accent-rose))",
+        glass: {
+          dark: "hsl(var(--glass-dark))",
+          medium: "hsl(var(--glass-medium))",
+          light: "hsl(var(--glass-light))",
+          lighter: "hsl(var(--glass-lighter))",
+          lightest: "hsl(var(--glass-lightest))",
+          surface1: "hsl(var(--glass-surface-1))",
+          surface2: "hsl(var(--glass-surface-2))",
+          surface3: "hsl(var(--glass-surface-3))",
+          surfaceDark: "hsl(var(--glass-surface-dark))",
+          border: "hsl(var(--glass-border))",
+          borderDark: "hsl(var(--glass-border-dark))",
         },
         surface: {
           1: "hsl(var(--surface-1))",
           2: "hsl(var(--surface-2))",
           3: "hsl(var(--surface-3))",
+          dark: "hsl(var(--surface-dark))",
         },
       },
       borderRadius: {
