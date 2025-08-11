@@ -314,7 +314,7 @@ const Index = () => {
                 }}
                 className="card-clean p-8 card-hover relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-gradient-purple/5 to-gradient-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-gray-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <motion.div
                   className={`w-16 h-16 ${index === 0 ? "glass-dark" : "glass-medium"} rounded-2xl flex items-center justify-center mb-6 relative z-10 float`}
@@ -416,7 +416,7 @@ const Index = () => {
                 }}
                 className="card-clean overflow-hidden card-hover group relative"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gradient-purple/20 to-gradient-blue/20 overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gradient-to-br from-black/20 to-gray-600/20 overflow-hidden relative">
                   <motion.img
                     src={work.image}
                     alt={work.title}
@@ -437,7 +437,7 @@ const Index = () => {
                         ? "glass-dark text-white"
                         : index === 1
                           ? "glass-medium text-white"
-                          : "glass-light text-white"
+                          : "glass-light text-black"
                     } rounded-full text-sm font-medium mb-3`}
                   >
                     {work.category}
@@ -450,7 +450,7 @@ const Index = () => {
                   </p>
                   <Link
                     to={work.link}
-                    className="inline-flex items-center gap-2 text-gradient-primary font-medium hover:gap-4 transition-all duration-300 group/link"
+                    className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all duration-300 group/link"
                   >
                     View Project
                     <motion.div
