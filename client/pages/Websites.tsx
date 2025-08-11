@@ -12,63 +12,13 @@ const Websites = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A comprehensive e-commerce solution built with modern web technologies. Features include user authentication, payment processing, inventory management, and a responsive admin dashboard. The platform handles thousands of transactions daily and provides real-time analytics.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-      tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard with real-time data visualization for business intelligence. Includes customizable charts, automated reporting, and team collaboration features. Built with performance in mind to handle large datasets efficiently.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tech: ["Vue.js", "D3.js", "Express", "MongoDB", "Socket.io", "Docker"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      id: 3,
       title: "Portfolio Website",
-      description: "Personal portfolio showcasing creative work and development projects. Features smooth animations, responsive design, and optimized performance. Built with modern React patterns and styled with Tailwind CSS.",
+      description: "Personal portfolio showcasing creative work and development projects. Features smooth animations, responsive design, and optimized performance. Built with modern React patterns and styled with Tailwind CSS for a clean, minimal aesthetic.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       liveUrl: "#",
       githubUrl: "#",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, file sharing, and team communication. Includes kanban boards, gantt charts, and time tracking features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-      tech: ["React", "Firebase", "Material-UI", "PWA"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Weather Forecast App",
-      description: "Beautiful weather application with location-based forecasts, interactive maps, and severe weather alerts. Features clean UI design and smooth animations.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
-      tech: ["React Native", "OpenWeather API", "Expo", "AsyncStorage"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Blog Platform",
-      description: "Full-featured blogging platform with markdown support, SEO optimization, and content management. Includes user profiles, comments system, and social sharing.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
-      tech: ["Next.js", "Prisma", "PostgreSQL", "NextAuth.js"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
+      featured: true
     }
   ];
 
@@ -82,7 +32,7 @@ const Websites = () => {
               to="/"
               className="font-heading font-semibold text-slate-800 text-lg hover:text-primary transition-colors"
             >
-              Alex Chen
+              Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link to="/" className="font-heading text-slate-600 hover:text-primary transition-colors">Home</Link>
@@ -207,7 +157,7 @@ const Websites = () => {
       <footer className="py-12 px-6 border-t border-cream-200 bg-cream-100/50">
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-body text-slate-600">
-            © 2024 Alex Chen. Designed &amp; built with care.
+            © 2024 Ujjwal Tiwari. Designed &amp; built with care.
           </p>
         </div>
       </footer>
