@@ -47,19 +47,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Smoothbot color palette
-        dark: {
-          bg: "hsl(var(--dark-bg))",
-          card: "hsl(var(--card-bg))",
-          border: "hsl(var(--card-border))",
-        },
-        text: {
-          primary: "hsl(var(--text-primary))",
-          secondary: "hsl(var(--text-secondary))",
-          muted: "hsl(var(--text-muted))",
+        // Rise at Seven color palette
+        hero: {
+          overlay: "hsl(var(--hero-overlay))",
+          text: "hsl(var(--text-on-image))",
         },
         orange: {
-          500: "hsl(var(--orange-accent))",
+          400: "hsl(var(--accent-orange))",
+        },
+        warm: {
+          gray: "hsl(var(--warm-gray))",
         },
       },
       borderRadius: {
