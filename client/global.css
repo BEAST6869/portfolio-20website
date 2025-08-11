@@ -2,55 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   /**
-   * Smoothbot.live inspired dark theme
-   * Exact color palette and design elements
+   * Rise at Seven inspired design
+   * Clean, modern aesthetic with bold typography
    */
   :root {
-    /* Dark theme colors matching smoothbot.live */
-    --background: 16 16 16; /* Very dark background #101010 */
-    --foreground: 255 255 255; /* White text */
+    /* Clean light theme */
+    --background: 255 255 255; /* White background */
+    --foreground: 17 24 39; /* Dark text */
 
-    --card: 24 24 24; /* Dark card background #181818 */
-    --card-foreground: 255 255 255;
+    --card: 255 255 255; /* White cards */
+    --card-foreground: 17 24 39;
 
-    --popover: 24 24 24;
-    --popover-foreground: 255 255 255;
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
 
-    /* Primary - Orange/yellow accent from smoothbot */
-    --primary: 249 115 22; /* Orange #f97316 */
+    /* Primary - Clean blue/gray */
+    --primary: 59 130 246; /* Blue #3b82f6 */
     --primary-foreground: 255 255 255;
 
-    /* Secondary - Dark grays */
-    --secondary: 32 32 32; /* #202020 */
-    --secondary-foreground: 163 163 163; /* #a3a3a3 */
+    /* Secondary - Light grays */
+    --secondary: 248 250 252; /* #f8fafc */
+    --secondary-foreground: 71 85 105; /* #475569 */
 
-    --muted: 32 32 32;
-    --muted-foreground: 163 163 163;
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
 
-    --accent: 249 115 22;
+    --accent: 59 130 246;
     --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
-    --border: 32 32 32; /* Dark borders */
-    --input: 32 32 32;
-    --ring: 249 115 22;
+    --border: 226 232 240; /* Light borders */
+    --input: 226 232 240;
+    --ring: 59 130 246;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Smoothbot color palette */
-    --dark-bg: 16 16 16; /* #101010 */
-    --card-bg: 24 24 24; /* #181818 */
-    --card-border: 32 32 32; /* #202020 */
-    --text-primary: 255 255 255; /* #ffffff */
-    --text-secondary: 163 163 163; /* #a3a3a3 */
-    --text-muted: 115 115 115; /* #737373 */
-    --orange-accent: 249 115 22; /* #f97316 */
+    /* Rise at Seven color palette */
+    --hero-overlay: 0 0 0 / 0.4; /* Dark overlay for hero */
+    --text-on-image: 255 255 255; /* White text on images */
+    --accent-orange: 251 146 60; /* Orange accent #fb923c */
+    --warm-gray: 156 163 175; /* #9ca3af */
   }
 }
 
