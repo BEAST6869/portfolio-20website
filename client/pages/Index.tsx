@@ -264,7 +264,7 @@ const Index = () => {
       {/* Services Section */}
       <section
         id="services"
-        className="section-spacing px-6 bg-gradient-to-br from-surface-1 via-surface-2 to-surface-3 relative"
+        className="section-spacing px-6 bg-surface-2 relative"
       >
         <div className="content-center">
           <motion.div
