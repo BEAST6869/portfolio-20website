@@ -120,22 +120,39 @@ const Index = () => {
         <div className="content-center text-center">
           {/* Awards Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.3 }}
             className="mb-12"
           >
-            <p className="text-white/90 text-sm font-medium mb-6 tracking-wider uppercase">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-white/90 text-sm font-medium mb-6 tracking-wider uppercase shimmer"
+            >
               #1 Most Recommended Designer & Developer
-            </p>
+            </motion.p>
             <div className="flex justify-center items-center gap-8 mb-8">
               {awards.map((award, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="awards-badge rounded-full p-3"
+                  initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.6 + index * 0.15,
+                    ease: [0.6, -0.05, 0.01, 0.99]
+                  }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 10,
+                    transition: { duration: 0.2 }
+                  }}
+                  className="awards-badge rounded-full p-3 float pulse-glow"
+                  style={{
+                    animationDelay: `${index * 0.5}s`
+                  }}
                 >
                   <award.icon className="w-6 h-6 text-white" />
                 </motion.div>
