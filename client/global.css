@@ -63,34 +63,35 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.6;
     letter-spacing: 0.01em;
+    background: hsl(var(--dark-bg));
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300; /* Light weight like smoothbot */
+    letter-spacing: -0.01em;
     line-height: 1.2;
   }
 
   h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 4rem;
+    font-weight: 300;
   }
 
   h2 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   h3 {
-    font-size: 1.875rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .font-heading {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   .font-body {
@@ -106,7 +107,7 @@
       font-size: 2rem;
     }
     body {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
   }
 }
