@@ -262,10 +262,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section
-        id="services"
-        className="section-spacing px-6 hero-bg relative"
-      >
+      <section id="services" className="section-spacing px-6 hero-bg relative">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -348,9 +345,7 @@ const Index = () => {
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
-                      <span className="font-body text-white">
-                        {feature}
-                      </span>
+                      <span className="font-body text-white">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
