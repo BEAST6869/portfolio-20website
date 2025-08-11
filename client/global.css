@@ -2,53 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   /**
-   * Clean, minimalist design system
-   * Based on neutral colors with professional typography
+   * Smoothbot.live inspired dark theme
+   * Exact color palette and design elements
    */
   :root {
-    /* Base light theme - Clean & Minimal */
-    --background: 249 250 251; /* #F9FAFB - off-white */
-    --foreground: 17 24 39; /* #111827 - dark gray */
+    /* Dark theme colors matching smoothbot.live */
+    --background: 16 16 16; /* Very dark background #101010 */
+    --foreground: 255 255 255; /* White text */
 
-    --card: 255 255 255; /* Pure white cards */
-    --card-foreground: 17 24 39;
+    --card: 24 24 24; /* Dark card background #181818 */
+    --card-foreground: 255 255 255;
 
-    --popover: 255 255 255;
-    --popover-foreground: 17 24 39;
+    --popover: 24 24 24;
+    --popover-foreground: 255 255 255;
 
-    /* Primary - Calm blue accent */
-    --primary: 37 99 235; /* #2563EB - calm blue */
+    /* Primary - Orange/yellow accent from smoothbot */
+    --primary: 249 115 22; /* Orange #f97316 */
     --primary-foreground: 255 255 255;
 
-    /* Secondary - Muted grays */
-    --secondary: 243 244 246; /* #F3F4F6 - light neutral gray */
-    --secondary-foreground: 75 85 99; /* #4B5563 - muted gray */
+    /* Secondary - Dark grays */
+    --secondary: 32 32 32; /* #202020 */
+    --secondary-foreground: 163 163 163; /* #a3a3a3 */
 
-    --muted: 243 244 246;
-    --muted-foreground: 75 85 99;
+    --muted: 32 32 32;
+    --muted-foreground: 163 163 163;
 
-    --accent: 37 99 235;
+    --accent: 249 115 22;
     --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
-    --border: 229 231 235; /* Light gray borders */
-    --input: 229 231 235;
-    --ring: 37 99 235;
+    --border: 32 32 32; /* Dark borders */
+    --input: 32 32 32;
+    --ring: 249 115 22;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Custom minimalist colors */
-    --neutral-50: 249 250 251; /* #F9FAFB */
-    --neutral-100: 243 244 246; /* #F3F4F6 */
-    --neutral-500: 75 85 99; /* #4B5563 */
-    --neutral-900: 17 24 39; /* #111827 */
-    --blue-600: 37 99 235; /* #2563EB */
+    /* Smoothbot color palette */
+    --dark-bg: 16 16 16; /* #101010 */
+    --card-bg: 24 24 24; /* #181818 */
+    --card-border: 32 32 32; /* #202020 */
+    --text-primary: 255 255 255; /* #ffffff */
+    --text-secondary: 163 163 163; /* #a3a3a3 */
+    --text-muted: 115 115 115; /* #737373 */
+    --orange-accent: 249 115 22; /* #f97316 */
   }
 }
 
