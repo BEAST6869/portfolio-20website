@@ -2,102 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   /**
-   * Portfolio theme with soft, neutral colors
-   * Using light beige, off-white, and muted blue/green accents
+   * Glassmorphism dark theme with liquid glass effects
+   * Based on dark purple/blue gradients with glass aesthetics
    */
   :root {
-    /* Base colors */
-    --background: 44 20% 98%;  /* Soft off-white */
-    --foreground: 213 27% 20%; /* Dark slate for text */
+    /* Base dark theme */
+    --background: 240 10% 8%;  /* Very dark blue-gray */
+    --foreground: 0 0% 95%; /* Almost white text */
 
-    --card: 44 20% 98%;
-    --card-foreground: 213 27% 20%;
+    --card: 240 15% 12% / 0.7; /* Semi-transparent dark cards */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 44 20% 98%;
-    --popover-foreground: 213 27% 20%;
+    --popover: 240 15% 12% / 0.9;
+    --popover-foreground: 0 0% 95%;
 
-    /* Primary colors - muted sage green */
-    --primary: 158 25% 35%;
-    --primary-foreground: 44 20% 98%;
+    /* Primary colors - electric purple/blue */
+    --primary: 270 100% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary colors - warm beige */
-    --secondary: 34 25% 92%;
-    --secondary-foreground: 213 27% 20%;
+    /* Secondary - glass effect */
+    --secondary: 240 15% 15% / 0.5;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 34 25% 92%;
-    --muted-foreground: 213 15% 50%;
+    --muted: 240 10% 20% / 0.3;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 158 20% 88%;
-    --accent-foreground: 213 27% 20%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 44 20% 98%;
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 34 20% 88%;
-    --input: 34 20% 88%;
-    --ring: 158 25% 35%;
+    --border: 240 15% 25% / 0.3;
+    --input: 240 15% 15% / 0.5;
+    --ring: 270 100% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom portfolio colors */
-    --cream-50: 44 30% 98%;
-    --cream-100: 44 25% 95%;
-    --cream-200: 34 25% 92%;
+    /* Custom glassmorphism colors */
+    --glass-dark: 240 15% 12% / 0.1;
+    --glass-medium: 240 15% 15% / 0.2;
+    --glass-light: 240 15% 20% / 0.3;
+    --glass-border: 240 15% 30% / 0.2;
 
-    --sage-100: 158 20% 88%;
-    --sage-200: 158 20% 82%;
-    --sage-300: 158 25% 75%;
+    /* Gradient colors */
+    --gradient-start: 240 100% 20%;
+    --gradient-middle: 270 100% 25%;
+    --gradient-end: 300 100% 30%;
 
-    --slate-600: 213 15% 50%;
-    --slate-700: 213 20% 35%;
-    --slate-800: 213 27% 20%;
-  }
-
-  .dark {
-    --background: 213 27% 8%;
-    --foreground: 44 20% 95%;
-
-    --card: 213 27% 8%;
-    --card-foreground: 44 20% 95%;
-
-    --popover: 213 27% 8%;
-    --popover-foreground: 44 20% 95%;
-
-    --primary: 158 20% 60%;
-    --primary-foreground: 213 27% 8%;
-
-    --secondary: 213 25% 15%;
-    --secondary-foreground: 44 20% 95%;
-
-    --muted: 213 25% 15%;
-    --muted-foreground: 213 15% 65%;
-
-    --accent: 213 25% 15%;
-    --accent-foreground: 44 20% 95%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 44 20% 95%;
-
-    --border: 213 25% 15%;
-    --input: 213 25% 15%;
-    --ring: 158 20% 60%;
-
-    /* Custom portfolio colors for dark mode */
-    --cream-50: 213 25% 12%;
-    --cream-100: 213 25% 15%;
-    --cream-200: 213 25% 18%;
-
-    --sage-100: 158 15% 25%;
-    --sage-200: 158 15% 30%;
-    --sage-300: 158 20% 35%;
-
-    --slate-600: 213 15% 65%;
-    --slate-700: 213 15% 75%;
-    --slate-800: 44 20% 90%;
+    /* Accent colors */
+    --purple-glow: 270 100% 65%;
+    --blue-glow: 240 100% 70%;
+    --pink-glow: 320 100% 70%;
   }
 }
 
