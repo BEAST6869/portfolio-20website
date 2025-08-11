@@ -434,10 +434,10 @@ const Index = () => {
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
                       index === 0
-                        ? "glass-dark text-white"
+                        ? "bg-yellow-500 text-white"
                         : index === 1
-                          ? "glass-medium text-white"
-                          : "glass-light text-black"
+                          ? "bg-orange-500 text-white"
+                          : "bg-blue-500 text-white"
                     } rounded-full text-sm font-medium mb-3`}
                   >
                     {work.category}
