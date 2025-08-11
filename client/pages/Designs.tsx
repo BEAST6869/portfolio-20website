@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Eye } from 'lucide-react';
-import { useState } from 'react';
+import { ArrowLeft } from 'lucide-react';
 
 const Designs = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -97,7 +95,7 @@ const Designs = () => {
               to="/"
               className="font-heading font-semibold text-slate-800 text-lg hover:text-primary transition-colors"
             >
-              Alex Chen
+              Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link to="/" className="font-heading text-slate-600 hover:text-primary transition-colors">Home</Link>
@@ -189,17 +187,13 @@ const Designs = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: imageIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="group relative aspect-[4/3] bg-sage-100 rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-                      onClick={() => setSelectedImage(image)}
+                      className="group relative aspect-[4/3] bg-sage-100 rounded-2xl overflow-hidden shadow-lg"
                     >
                       <img
                         src={image}
                         alt={`${project.title} - Image ${imageIndex + 1}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                        <Eye className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -209,42 +203,12 @@ const Designs = () => {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            className="max-w-4xl max-h-[90vh] relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={selectedImage}
-              alt="Project detail"
-              className="w-full h-full object-contain rounded-lg"
-            />
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-            >
-              ×
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-cream-200 bg-cream-100/50">
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-body text-slate-600">
-            © 2024 Alex Chen. Designed &amp; built with care.
+            © 2024 Ujjwal Tiwari. Designed &amp; built with care.
           </p>
         </div>
       </footer>
