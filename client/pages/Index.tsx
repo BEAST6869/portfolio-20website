@@ -301,54 +301,96 @@ const Index = () => {
       </section>
 
       {/* Featured Work Section */}
-      <section id="work" className="section-spacing px-6 bg-secondary">
-        <div className="content-center">
+      <section id="work" className="section-spacing px-6 bg-gradient-to-br from-surface-2 to-surface-3 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-purple/10 rounded-full blur-3xl float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-blue/10 rounded-full blur-3xl float-delayed"></div>
+        </div>
+
+        <div className="content-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-gradient-primary"
+            >
               Featured Work
-            </h2>
-            <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            >
               A selection of our best projects showcasing creativity and technical excellence
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredWork.map((work, index) => (
               <motion.div
                 key={work.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 60, rotate: (index - 1) * 5 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                className="card-clean overflow-hidden card-hover group"
+                whileHover={{
+                  y: -15,
+                  scale: 1.03,
+                  rotate: (index - 1) * 2,
+                  transition: { duration: 0.4 }
+                }}
+                className="card-clean overflow-hidden card-hover group relative"
               >
-                <div className="aspect-[4/3] bg-muted overflow-hidden">
-                  <img
+                <div className="aspect-[4/3] bg-gradient-to-br from-gradient-purple/20 to-gradient-blue/20 overflow-hidden relative">
+                  <motion.img
                     src={work.image}
                     alt={work.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1, rotate: 2 }}
+                    transition={{ duration: 0.6 }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3">
+                <div className="p-6 relative">
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+                    viewport={{ once: true }}
+                    className={`inline-block px-3 py-1 ${
+                      index === 0 ? 'bg-gradient-purple text-white' :
+                      index === 1 ? 'bg-gradient-blue text-white' :
+                      'bg-gradient-cyan text-white'
+                    } rounded-full text-sm font-medium mb-3`}
+                  >
                     {work.category}
-                  </span>
+                  </motion.span>
                   <h3 className="font-heading text-xl font-bold mb-3">{work.title}</h3>
                   <p className="font-body text-muted-foreground leading-relaxed mb-4">
                     {work.description}
                   </p>
                   <Link
                     to={work.link}
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-gradient-primary font-medium hover:gap-4 transition-all duration-300 group/link"
                   >
                     View Project
-                    <ArrowRight className="w-4 h-4" />
+                    <motion.div
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.div>
                   </Link>
                 </div>
               </motion.div>
