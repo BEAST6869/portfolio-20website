@@ -125,7 +125,7 @@ const Index = () => {
         transition={{ duration: 0.6 }}
         className="fixed top-0 w-full nav-transparent z-50"
       >
-        <div className="content-center px-6 py-4">
+        <div className="content-center px-6 py-2">
           <div className="flex justify-between items-center">
             <motion.div
               whileHover={{ scale: 1.05, rotate: 1 }}
@@ -218,7 +218,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="block"
+                className="text-white/90 block text-glow"
               >
                 We Create
               </motion.span>
@@ -226,7 +226,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="text-gradient-rainbow block text-glow"
+                className="text-white/90 block text-glow"
               >
                 Digital Leaders
               </motion.span>
@@ -429,15 +429,15 @@ const Index = () => {
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
                       index === 0
-                        ? "bg-yellow-500 text-white"
+                        ? "glass-white text-white"
                         : index === 1
-                          ? "bg-orange-500 text-white"
-                          : "bg-blue-500 text-white"
-                    } rounded-full text-sm font-medium mb-3`}
+                          ? "glass-medium text-white"
+                          : "glass-medium text-white"
+                    } rounded-full text-sm font-medium mb-3 backdrop-blur-md border border-white/20`}
                   >
                     {work.category}
                   </motion.span>
-                  <h3 className="font-heading text-xl font-bold mb-3">
+                  <h3 className="font-heading text-xl font-bold mb-3 text-white">
                     {work.title}
                   </h3>
                   <p className="font-body text-muted-foreground leading-relaxed mb-4">
@@ -445,14 +445,14 @@ const Index = () => {
                   </p>
                   <Link
                     to={work.link}
-                    className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all duration-300 group/link"
+                    className="inline-flex items-center gap-2 text-white font-medium hover:gap-4 transition-all duration-300 group/link"
                   >
                     View Project
                     <motion.div
                       whileHover={{ x: 5 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 text-white" />
                     </motion.div>
                   </Link>
                 </div>
