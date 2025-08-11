@@ -369,9 +369,9 @@ const Index = () => {
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
                     viewport={{ once: true }}
                     className={`inline-block px-3 py-1 ${
-                      index === 0 ? 'bg-gradient-purple text-white' :
-                      index === 1 ? 'bg-gradient-blue text-white' :
-                      'bg-gradient-cyan text-white'
+                      index === 0 ? 'glass-dark text-white' :
+                      index === 1 ? 'glass-medium text-white' :
+                      'glass-light text-white'
                     } rounded-full text-sm font-medium mb-3`}
                   >
                     {work.category}
