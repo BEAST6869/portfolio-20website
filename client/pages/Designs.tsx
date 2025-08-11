@@ -74,17 +74,23 @@ const Designs = () => {
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-primary/5 to-purple-50">
-        <div className="content-center">
+      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-gradient-purple/10 via-gradient-blue/5 to-gradient-cyan/10 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-purple/20 rounded-full blur-3xl float"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-blue/10 rounded-full blur-3xl float-delayed"></div>
+        </div>
+
+        <div className="content-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
             className="mb-8"
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body card-clean px-4 py-2 text-sm"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-body card-clean px-4 py-2 text-sm hover:scale-105 shimmer"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -92,23 +98,42 @@ const Designs = () => {
           </motion.div>
 
           <motion.div
-            variants={fadeInUp}
             initial="initial"
             animate="animate"
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full mb-8 border border-primary/20">
-              <Palette className="w-5 h-5" />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center gap-3 gradient-purple-blue text-white px-6 py-3 rounded-full mb-8 pulse-glow"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Palette className="w-5 h-5" />
+              </motion.div>
               <span className="font-body font-medium">Figma Design Specialist</span>
-            </div>
-            
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight text-gradient-primary"
+            >
               Design Portfolio
-            </h1>
-            <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance"
+            >
               A showcase of visual design work specializing in Figma designs, spanning branding, user interfaces, and digital experiences.
               Each project tells a unique story through thoughtful design decisions and modern visual aesthetics.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
