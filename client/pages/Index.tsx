@@ -471,7 +471,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-spacing px-6 gradient-purple-blue text-white relative overflow-hidden">
+      <section id="contact" className="section-spacing px-6 glass-dark text-white relative overflow-hidden">
         {/* Animated background patterns */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent rotate-12 transform -translate-x-1/2"></div>
