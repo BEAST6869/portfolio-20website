@@ -432,7 +432,7 @@ const Index = () => {
                         ? "glass-white text-white"
                         : index === 1
                           ? "glass-medium text-white"
-                          : "glass-dark text-white"
+                          : "glass-medium text-white"
                     } rounded-full text-sm font-medium mb-3 backdrop-blur-md border border-white/20`}
                   >
                     {work.category}
