@@ -15,40 +15,34 @@ const Designs = () => {
   const projects = [
     {
       id: 1,
-      title: "Brand Identity - TechStart",
-      description: "Complete brand identity design for a technology startup, including logo design, color palette, typography system, and brand guidelines. The identity reflects innovation while maintaining approachability.",
-      type: "Branding",
+      title: "Flipkart Startup Story",
+      description: "Creative infographic design showcasing Flipkart's journey as a startup success story. Designed with vibrant yellow theme and engaging visual elements including founders, product categories, and company milestones.",
+      type: "Figma Design",
       year: "2024",
       images: [
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F093637ccbd3c4c5facdfebe9af660b41?format=webp&width=800"
       ],
       featured: true
     },
     {
       id: 2,
-      title: "Mobile App UI - FitTrack",
-      description: "Clean and intuitive user interface design for a fitness tracking application. Focused on creating a motivating experience that encourages daily use through gamification and clear progress visualization.",
-      type: "UI/UX Design",
+      title: "Ganesh Chaturthi Greeting",
+      description: "Traditional festival greeting card design celebrating Ganesh Chaturthi with beautiful ornate patterns, warm colors, and cultural elements. Features Lord Ganesha with traditional decorative elements and festive atmosphere.",
+      type: "Figma Design",
       year: "2024",
       images: [
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F9cf8a24b705e45b4b83d62fea10d59e1?format=webp&width=800"
       ],
       featured: true
     },
     {
       id: 3,
-      title: "Website Redesign - Bella Vista",
-      description: "Modern redesign for a local restaurant's online presence, focusing on showcasing their cuisine and creating an appetizing digital experience that drives reservations.",
-      type: "Web Design",
-      year: "2023",
+      title: "Father's Day Greeting Card",
+      description: "Heartwarming Father's Day card design with modern illustration style, featuring father-child bonding theme with paper airplanes, hearts, and floral elements on a beautiful gradient background.",
+      type: "Figma Design",
+      year: "2024",
       images: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop"
+        "https://cdn.builder.io/api/v1/image/assets%2F7946648302634a1d808c7d73bb137994%2F2ba678aed90a4452be7c1bc64cdc3496?format=webp&width=800"
       ],
       featured: false
     },
