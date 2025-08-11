@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Code2, Mail, ChevronDown } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Code2, Mail, Zap, Globe, Smartphone } from 'lucide-react';
 
 const Websites = () => {
   const fadeInUp = {
@@ -18,52 +18,57 @@ const Websites = () => {
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       liveUrl: "#",
       githubUrl: "#",
-      featured: true
+      featured: true,
+      category: "Personal Project",
+      year: "2024"
     }
   ];
 
   const technologies = [
     {
-      category: "Frontend",
-      icon: "💻",
-      items: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vite"]
+      category: "Frontend Development",
+      icon: Globe,
+      description: "Modern frontend technologies for exceptional user experiences",
+      items: ["React & Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive Design"]
     },
     {
-      category: "Backend",
-      icon: "⚙️",
-      items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "API Design"]
+      category: "Performance & SEO",
+      icon: Zap,
+      description: "Optimized for speed, search engines, and user engagement",
+      items: ["Core Web Vitals", "SEO Optimization", "Lighthouse Scores", "Bundle Optimization", "CDN Integration"]
     },
     {
-      category: "Tools",
-      icon: "🛠️",
-      items: ["Git", "Figma", "VS Code", "Framer Motion", "Vercel"]
+      category: "Development Tools",
+      icon: Code2,
+      description: "Professional development workflow and best practices",
+      items: ["Git Version Control", "CI/CD Pipelines", "Testing Frameworks", "Code Quality Tools", "Documentation"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-dark-bg">
-      {/* Navigation - Smoothbot style */}
-      <nav className="fixed top-0 w-full nav-dark z-50">
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full nav-clean z-50">
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="font-heading font-bold text-2xl text-white tracking-wider hover:scale-105 transition-transform"
+              className="font-heading font-bold text-xl text-foreground hover:scale-105 transition-transform"
             >
-              UJJWAL
+              Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="font-body text-text-secondary hover:text-white transition-colors uppercase text-sm tracking-wide">Home</Link>
-              <Link to="/websites" className="font-body text-orange-500 font-medium uppercase text-sm tracking-wide">Websites</Link>
-              <Link to="/designs" className="font-body text-text-secondary hover:text-white transition-colors uppercase text-sm tracking-wide">Designs</Link>
-              <ChevronDown className="w-4 h-4 text-text-secondary" />
+              <Link to="/" className="font-body text-muted-foreground hover:text-foreground transition-colors">Home</Link>
+              <Link to="/websites" className="font-body text-primary font-semibold">Websites</Link>
+              <Link to="/designs" className="font-body text-muted-foreground hover:text-foreground transition-colors">Designs</Link>
+              <a href="mailto:ujjwalt616@gmail.com" className="btn-primary">Get In Touch</a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6">
+      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -73,7 +78,7 @@ const Websites = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-text-secondary hover:text-white transition-colors font-body card-dark px-4 py-2 rounded-xl text-sm uppercase tracking-wide"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body card-clean px-4 py-2 text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -86,26 +91,51 @@ const Websites = () => {
             animate="animate"
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-orange-500/10 text-orange-500 px-6 py-3 rounded-full mb-8 border border-orange-500/20">
+            <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full mb-8 border border-primary/20">
               <Code2 className="w-5 h-5" />
-              <span className="font-body font-medium uppercase text-sm tracking-wide">Web Developer</span>
+              <span className="font-body font-medium">Full-Stack Developer</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-7xl font-light mb-6 text-white text-balance leading-tight">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
               Web Development
             </h1>
-            <p className="font-body text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed text-balance">
-              A collection of websites and web applications I've built, showcasing modern technologies 
-              and approaches to solving real-world problems with clean, efficient code.
+            <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
+              Creating modern, performant websites and web applications using cutting-edge technologies. 
+              Every project is built with scalability, accessibility, and user experience in mind.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Project Display */}
-      <section className="pb-24 px-6">
+      {/* Featured Stats */}
+      <section className="py-16 px-6 bg-white border-b">
         <div className="content-center">
-          <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "100%", label: "Mobile Responsive" },
+              { number: "A+", label: "Lighthouse Score" },
+              { number: "99%", label: "Uptime Guarantee" },
+              { number: "24/7", label: "Support Available" }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Display */}
+      <section className="section-spacing px-6">
+        <div className="content-center">
+          <div className="max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -113,49 +143,58 @@ const Websites = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="space-y-12"
               >
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="text-center">
-                    <div className="inline-block bg-orange-500/10 text-orange-500 px-4 py-2 rounded-full border border-orange-500/20">
-                      <span className="font-body font-medium uppercase text-sm tracking-wide">Featured Project</span>
+                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full border border-primary/20">
+                      <Zap className="w-5 h-5" />
+                      <span className="font-body font-medium">Featured Project</span>
                     </div>
                   </div>
                 )}
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   {/* Project Image */}
-                  <div className="card-dark p-6 card-hover">
-                    <div className="aspect-[4/3] bg-gray-900/50 rounded-xl overflow-hidden">
+                  <div className="card-clean overflow-hidden card-hover">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex items-center justify-center">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg shadow-lg"
                       />
                     </div>
                   </div>
 
                   {/* Project Info */}
                   <div className="space-y-8">
+                    <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
+                      <span>{project.category}</span>
+                      <span>•</span>
+                      <span>{project.year}</span>
+                      <span>•</span>
+                      <span>React Application</span>
+                    </div>
+
                     <div>
-                      <h2 className="font-heading text-4xl md:text-5xl font-light text-white mb-6 text-balance leading-tight">
+                      <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight">
                         {project.title}
                       </h2>
                       
-                      <p className="font-body text-lg text-text-secondary leading-relaxed">
+                      <p className="font-body text-lg text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Tech Stack */}
                     <div>
-                      <h3 className="font-heading text-xl font-light text-white mb-4">Technologies Used</h3>
+                      <h3 className="font-heading text-lg font-semibold mb-4">Technologies Used</h3>
                       <div className="flex flex-wrap gap-3">
                         {project.tech.map((tech) => (
                           <span
                             key={tech}
-                            className="card-dark px-4 py-2 rounded-xl text-text-secondary font-body text-sm border border-dark-border"
+                            className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
                           >
                             {tech}
                           </span>
@@ -167,17 +206,17 @@ const Websites = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <a
                         href={project.liveUrl}
-                        className="inline-flex items-center justify-center gap-3 bg-orange-500 text-white px-6 py-3 rounded-xl font-body font-medium transition-all duration-300 hover:bg-orange-600 hover:scale-105 card-hover uppercase tracking-wide text-sm"
+                        className="btn-primary inline-flex items-center justify-center gap-3"
                       >
                         <ExternalLink className="w-5 h-5" />
-                        Live Demo
+                        View Live Site
                       </a>
                       <a
                         href={project.githubUrl}
-                        className="inline-flex items-center justify-center gap-3 card-dark text-white px-6 py-3 rounded-xl font-body font-medium transition-all duration-300 card-hover border border-dark-border uppercase tracking-wide text-sm"
+                        className="inline-flex items-center justify-center gap-3 card-clean px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border"
                       >
                         <Github className="w-5 h-5" />
-                        View Code
+                        View Source Code
                       </a>
                     </div>
                   </div>
@@ -189,7 +228,7 @@ const Websites = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="section-spacing px-6">
+      <section className="section-spacing px-6 bg-secondary">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -198,75 +237,123 @@ const Websites = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-white text-balance">
-              Technologies I Work With
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+              Development Expertise
             </h2>
-            <div className="w-16 h-0.5 bg-orange-500 mx-auto mb-6"></div>
-            <p className="font-body text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed text-balance">
-              I stay current with modern web technologies to deliver cutting-edge solutions
+            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Leveraging modern technologies and best practices to deliver exceptional web experiences
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-          >
+          <div className="grid lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
-              <div
+              <motion.div
                 key={tech.category}
-                className="card-dark p-8 text-center card-hover"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-clean p-8 card-hover text-center"
               >
-                <div className="text-4xl mb-6">{tech.icon}</div>
-                <h3 className="font-heading text-xl font-light text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">
-                  {tech.items.map((item) => (
-                    <div key={item} className="font-body text-text-muted text-sm">
-                      {item}
-                    </div>
-                  ))}
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <tech.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>
+                <h3 className="font-heading text-xl font-bold mb-3">{tech.category}</h3>
+                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
+                  {tech.description}
+                </p>
+                <ul className="space-y-2 text-left">
+                  {tech.items.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="font-body text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-spacing px-6">
+      {/* Development Process */}
+      <section className="section-spacing px-6 bg-white">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center mb-16"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-white text-balance">
-              Ready to Build Something Great?
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+              Development Process
             </h2>
-            <p className="font-body text-xl text-text-secondary mb-8 leading-relaxed text-balance">
-              Let's discuss your next web project and bring your ideas to life with modern, 
-              performant, and beautiful web applications.
+            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              A systematic approach to delivering high-quality web solutions
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Discovery", description: "Understanding your goals, target audience, and technical requirements" },
+              { step: "02", title: "Planning", description: "Creating detailed project roadmap, wireframes, and technical architecture" },
+              { step: "03", title: "Development", description: "Building with modern technologies, testing, and optimization" },
+              { step: "04", title: "Launch", description: "Deployment, performance monitoring, and ongoing support" }
+            ].map((phase, index) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                  {phase.step}
+                </div>
+                <h3 className="font-heading text-lg font-bold mb-3">{phase.title}</h3>
+                <p className="font-body text-muted-foreground leading-relaxed text-sm">
+                  {phase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-spacing px-6 bg-primary text-white">
+        <div className="content-center text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6 text-balance">
+              Ready to Build Your Next Project?
+            </h2>
+            <p className="font-body text-xl text-white/90 mb-12 leading-relaxed text-balance max-w-3xl mx-auto">
+              Let's create a modern, performant website that drives results. From concept to deployment, 
+              I'll handle every aspect of your web development needs.
             </p>
             <a
               href="mailto:ujjwalt616@gmail.com"
-              className="inline-flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl font-body font-medium transition-all duration-300 hover:bg-orange-600 hover:scale-105 card-hover uppercase tracking-wide text-sm"
+              className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Code2 className="w-5 h-5" />
-              Start a Project
+              Start Your Web Project
             </a>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-dark-border">
+      <footer className="py-12 px-6 bg-white border-t">
         <div className="content-center text-center">
-          <p className="font-body text-text-muted text-sm">
-            © 2024 Ujjwal Tiwari. Crafted with precision and passion.
+          <p className="font-body text-muted-foreground">
+            © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and precision.
           </p>
         </div>
       </footer>
