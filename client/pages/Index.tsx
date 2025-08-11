@@ -169,8 +169,22 @@ const Index = () => {
               variants={fadeInUp}
               className="font-heading text-6xl md:text-8xl font-bold text-hero mb-8 text-balance leading-tight"
             >
-              We Create<br />
-              <span className="text-white">Digital Leaders</span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="block"
+              >
+                We Create
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="text-gradient-rainbow block text-glow"
+              >
+                Digital Leaders
+              </motion.span>
             </motion.h1>
             
             <motion.p
