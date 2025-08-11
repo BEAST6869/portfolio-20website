@@ -218,9 +218,9 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="block"
+                className="block text-gradient-rainbow text-glow"
               >
-                Liquid Glass
+                We Create
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
