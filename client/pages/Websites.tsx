@@ -174,10 +174,10 @@ const Websites = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-white/80 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -187,7 +187,7 @@ const Websites = () => {
       </section>
 
       {/* Project Display */}
-      <section className="section-spacing px-6">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <div className="max-w-6xl mx-auto">
             {projects.map((project, index) => (
@@ -202,7 +202,7 @@ const Websites = () => {
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="text-center">
-                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-6 py-3 rounded-full border border-black/20">
+                    <div className="inline-flex items-center gap-2 glass-dark text-white px-6 py-3 rounded-full pulse-glow">
                       <Zap className="w-5 h-5" />
                       <span className="font-body font-medium">
                         Featured Project
