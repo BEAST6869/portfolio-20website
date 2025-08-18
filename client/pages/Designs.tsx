@@ -357,7 +357,7 @@ const Designs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing px-6 bg-black text-white relative overflow-hidden">
+      <section className="section-spacing px-6 hero-bg text-white relative overflow-hidden">
         <div className="content-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -385,7 +385,7 @@ const Designs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-black border-t border-white/10">
+      <footer className="py-12 px-6 hero-bg border-t border-white/10">
         <div className="content-center text-center">
           <p className="font-body text-white/80">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
