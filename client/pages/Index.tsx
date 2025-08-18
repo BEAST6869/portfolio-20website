@@ -647,7 +647,7 @@ const Index = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance shimmer"
+              className="font-heading text-4xl md:text-6xl font-bold mb-6 text-balance text-white shimmer"
             >
               Ready to Create Something Amazing?
             </motion.h2>
