@@ -338,7 +338,7 @@ const Websites = () => {
       </section>
 
       {/* Development Process */}
-      <section className="section-spacing px-6 bg-white">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -347,10 +347,10 @@ const Websites = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
               Development Process
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
               A systematic approach to delivering high-quality web solutions
             </p>
           </motion.div>
