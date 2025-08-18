@@ -75,7 +75,7 @@ const Designs = () => {
       year: "2024",
       client: "Cultural Project",
       images: [
-        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2F9039d4ed14954fc2b882cbc50da2a68b?format=webp&width=800",
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2Fb86ed69a3cf24edda74a8af76ceafd3f?format=webp&width=800",
       ],
       featured: true,
       color: "bg-green-100",
