@@ -26,6 +26,90 @@ const Designs = () => {
     },
     {
       id: 2,
+      title: "Genesys EP.01 - Prompt Engineering",
+      description:
+        "Instagram story and reel cover design for Genesys series featuring prompt engineering. Modern isometric design with purple color scheme, showcasing AI and programming concepts with floating computer screens and tech elements.",
+      type: "Instagram Story Cover",
+      year: "2024",
+      client: "Genesys Series",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2Faa3bf730f0e9437288b14684744cd151?format=webp&width=800",
+      ],
+      featured: true,
+      color: "bg-purple-100",
+    },
+    {
+      id: 3,
+      title: "Genesys EP.02 - OpenCV",
+      description:
+        "Instagram story and reel cover design for Genesys series focusing on OpenCV. Features teal/green color palette with AI brain illustration, computer vision elements, and modern geometric patterns representing machine learning and visual processing.",
+      type: "Instagram Story Cover",
+      year: "2024",
+      client: "Genesys Series",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2F305acab3e90c4feaa864245ef7cc50a3?format=webp&width=800",
+      ],
+      featured: true,
+      color: "bg-teal-100",
+    },
+    {
+      id: 4,
+      title: "Genesys EP.03 - Image and Video Generation",
+      description:
+        "Instagram story and reel cover design for Genesys series about image and video generation. Brown/orange aesthetic with retro-futuristic illustration showing a person surrounded by floating media screens and creative elements.",
+      type: "Instagram Story Cover",
+      year: "2024",
+      client: "Genesys Series",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2Ff16a542ad06f47a091522f747bf9c1fb?format=webp&width=800",
+      ],
+      featured: true,
+      color: "bg-orange-100",
+    },
+    {
+      id: 5,
+      title: "Eid al Adha Mubarak",
+      description:
+        "Traditional Islamic festival greeting design celebrating Eid al Adha. Features beautiful green gradient background with ornate Islamic lanterns, decorative crescent moon, mosque silhouettes, and elegant Arabic calligraphy in white.",
+      type: "Festival Design",
+      year: "2024",
+      client: "Cultural Project",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2F9039d4ed14954fc2b882cbc50da2a68b?format=webp&width=800",
+      ],
+      featured: true,
+      color: "bg-green-100",
+    },
+    {
+      id: 6,
+      title: "CASA - Drugs Aren't The Answer",
+      description:
+        "Event design for CASA awareness campaign with modern purple aesthetic. Clean layout featuring speaker information, event details, and professional presentation design for Dr. Ambedkar Auditorium event on August 13th, 2025.",
+      type: "Event Design",
+      year: "2024",
+      client: "CASA Campaign",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2Fb86ed69a3cf24edda74a8af76ceafd3f?format=webp&width=800",
+      ],
+      featured: false,
+      color: "bg-purple-200",
+    },
+    {
+      id: 7,
+      title: "Happy Krishna Janmashtami",
+      description:
+        "Traditional Hindu festival greeting celebrating Krishna Janmashtami. Features beautiful blue gradient background with intricate mandala patterns, colorful marigold garlands, and traditional elements including pot, peacock feathers, and ornate decorations.",
+      type: "Festival Design",
+      year: "2024",
+      client: "Cultural Project",
+      images: [
+        "https://cdn.builder.io/api/v1/image/assets%2Fcf85a687a8f6493290063b48dba7288c%2F1e293c6d14ef45ae8552aedb95c433db?format=webp&width=800",
+      ],
+      featured: true,
+      color: "bg-blue-100",
+    },
+    {
+      id: 8,
       title: "Ganesh Chaturthi Greeting",
       description:
         "Traditional festival greeting card design celebrating Ganesh Chaturthi with beautiful ornate patterns, warm colors, and cultural elements. Features Lord Ganesha with traditional decorative elements and festive atmosphere.",
@@ -39,7 +123,7 @@ const Designs = () => {
       color: "bg-gray-200",
     },
     {
-      id: 3,
+      id: 9,
       title: "Father's Day Greeting Card",
       description:
         "Heartwarming Father's Day card design with modern illustration style, featuring father-child bonding theme with paper airplanes, hearts, and floral elements on a beautiful gradient background.",
