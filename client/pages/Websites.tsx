@@ -145,10 +145,10 @@ const Websites = () => {
               </span>
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight text-white shimmer">
               Web Development
             </h1>
-            <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
+            <p className="font-body text-xl text-white/90 max-w-4xl mx-auto leading-relaxed text-balance">
               Creating modern, performant websites and web applications using
               cutting-edge technologies. Every project is built with
               scalability, accessibility, and user experience in mind.
@@ -158,7 +158,7 @@ const Websites = () => {
       </section>
 
       {/* Featured Stats */}
-      <section className="py-16 px-6 bg-white border-b">
+      <section className="py-16 px-6 glass-dark border-b border-white/10">
         <div className="content-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
