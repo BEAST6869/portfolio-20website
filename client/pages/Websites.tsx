@@ -393,10 +393,10 @@ const Websites = () => {
                 <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
                   {phase.step}
                 </div>
-                <h3 className="font-heading text-lg font-bold mb-3">
+                <h3 className="font-heading text-lg font-bold mb-3 text-white">
                   {phase.title}
                 </h3>
-                <p className="font-body text-muted-foreground leading-relaxed text-sm">
+                <p className="font-body text-white/80 leading-relaxed text-sm">
                   {phase.description}
                 </p>
               </motion.div>
@@ -406,7 +406,7 @@ const Websites = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing px-6 bg-primary text-white">
+      <section className="section-spacing px-6 glass-dark text-white">
         <div className="content-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -434,9 +434,9 @@ const Websites = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-white border-t">
+      <footer className="py-12 px-6 glass-dark border-t border-white/10">
         <div className="content-center text-center">
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-white/80">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
             precision.
           </p>
