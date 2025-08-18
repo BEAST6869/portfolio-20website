@@ -225,7 +225,7 @@ const Websites = () => {
 
                   {/* Project Info */}
                   <div className="space-y-8">
-                    <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
+                    <div className="flex items-center gap-4 text-sm font-body text-white/80">
                       <span>{project.category}</span>
                       <span>•</span>
                       <span>{project.year}</span>
@@ -234,18 +234,18 @@ const Websites = () => {
                     </div>
 
                     <div>
-                      <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight">
+                      <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight text-white">
                         {project.title}
                       </h2>
 
-                      <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                      <p className="font-body text-lg text-white/90 leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Tech Stack */}
                     <div>
-                      <h3 className="font-heading text-lg font-semibold mb-4">
+                      <h3 className="font-heading text-lg font-semibold mb-4 text-white">
                         Technologies Used
                       </h3>
                       <div className="flex flex-wrap gap-3">
