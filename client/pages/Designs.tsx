@@ -55,33 +55,33 @@ const Designs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full nav-clean z-50">
+      <nav className="fixed top-0 w-full nav-transparent z-50">
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="font-heading font-bold text-xl text-foreground hover:scale-105 transition-transform"
+              className="font-heading font-bold text-xl text-white hover:scale-105 transition-transform shimmer"
             >
               Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 to="/"
-                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-white/80 hover:text-white transition-colors"
               >
                 Home
               </Link>
               <Link
                 to="/websites"
-                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-white/80 hover:text-white transition-colors"
               >
                 Websites
               </Link>
               <Link
                 to="/designs"
-                className="font-body text-primary font-semibold"
+                className="font-body text-white font-semibold"
               >
                 Designs
               </Link>
@@ -94,7 +94,7 @@ const Designs = () => {
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-surface-2 via-surface-1 to-surface-3 relative overflow-hidden">
+      <section className="section-spacing pt-32 px-6 hero-bg relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-black/5 rounded-full blur-3xl float"></div>
@@ -110,7 +110,7 @@ const Designs = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-body card-clean px-4 py-2 text-sm hover:scale-105 shimmer"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 font-body glass-white px-4 py-2 text-sm hover:scale-105 shimmer"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -143,15 +143,22 @@ const Designs = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight text-gradient-primary"
+              className="font-heading text-6xl md:text-8xl font-bold text-hero mb-8 text-balance leading-tight"
             >
-              Design Portfolio
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="text-white/90 block text-glow"
+              >
+                Design Portfolio
+              </motion.span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance"
+              className="font-body text-xl text-white/90 max-w-4xl mx-auto leading-relaxed text-balance"
             >
               A showcase of visual design work specializing in Figma designs,
               spanning branding, user interfaces, and digital experiences. Each
@@ -163,7 +170,7 @@ const Designs = () => {
       </section>
 
       {/* Featured Stats */}
-      <section className="py-16 px-6 bg-white border-b">
+      <section className="py-16 px-6 hero-bg border-b border-white/10">
         <div className="content-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -179,10 +186,10 @@ const Designs = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-white/80 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -192,7 +199,7 @@ const Designs = () => {
       </section>
 
       {/* Projects Gallery */}
-      <section className="section-spacing px-6">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <div className="space-y-24 max-w-6xl mx-auto">
             {projects.map((project, index) => (
@@ -222,7 +229,7 @@ const Designs = () => {
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
                   {project.featured && (
-                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-4 py-2 rounded-full border border-black/20">
+                    <div className="inline-flex items-center gap-2 glass-white text-white px-4 py-2 rounded-full border border-white/20">
                       <Award className="w-4 h-4" />
                       <span className="font-body font-medium text-sm">
                         Featured Project
@@ -230,7 +237,7 @@ const Designs = () => {
                     </div>
                   )}
 
-                  <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
+                  <div className="flex items-center gap-4 text-sm font-body text-white/80">
                     <span className="flex items-center gap-2">
                       <Eye className="w-4 h-4" />
                       {project.type}
@@ -241,22 +248,22 @@ const Designs = () => {
                     <span>{project.client}</span>
                   </div>
 
-                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-balance leading-tight">
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-balance leading-tight text-white">
                     {project.title}
                   </h2>
 
-                  <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                  <p className="font-body text-lg text-white/90 leading-relaxed">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                    <span className="px-4 py-2 glass-white text-white rounded-full text-sm font-medium border border-white/20">
                       Figma Design
                     </span>
-                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                    <span className="px-4 py-2 glass-white text-white rounded-full text-sm font-medium border border-white/20">
                       Visual Design
                     </span>
-                    <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                    <span className="px-4 py-2 glass-white text-white rounded-full text-sm font-medium border border-white/20">
                       Brand Identity
                     </span>
                   </div>
@@ -268,7 +275,7 @@ const Designs = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="section-spacing px-6 bg-secondary">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -277,10 +284,10 @@ const Designs = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
               Design Expertise
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
               Specialized skills and tools that bring creative visions to life
             </p>
           </motion.div>
@@ -329,17 +336,17 @@ const Designs = () => {
                 viewport={{ once: true }}
                 className="card-clean p-6 card-hover"
               >
-                <h3 className="font-heading text-xl font-bold mb-3">
+                <h3 className="font-heading text-xl font-bold mb-3 text-white">
                   {skill.title}
                 </h3>
-                <p className="font-body text-muted-foreground mb-4 leading-relaxed">
+                <p className="font-body text-white/80 mb-4 leading-relaxed">
                   {skill.description}
                 </p>
                 <ul className="space-y-2">
                   {skill.skills.map((item) => (
                     <li key={item} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="font-body text-sm">{item}</span>
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <span className="font-body text-sm text-white">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -350,7 +357,7 @@ const Designs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing px-6 bg-primary text-white">
+      <section className="section-spacing px-6 glass-dark text-white relative overflow-hidden">
         <div className="content-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -378,7 +385,7 @@ const Designs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-white border-t">
+      <footer className="py-12 px-6 bg-surface-3 border-t border-border">
         <div className="content-center text-center">
           <p className="font-body text-muted-foreground">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
