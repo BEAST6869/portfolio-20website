@@ -258,8 +258,8 @@ const Designs = () => {
         <div className="content-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "50+", label: "Projects Completed" },
-              { number: "3", label: "Design Categories" },
+              { number: "60+", label: "Projects Completed" },
+              { number: "5", label: "Design Categories" },
               { number: "100%", label: "Client Satisfaction" },
               { number: "2024", label: "Current Year" },
             ].map((stat, index) => (
