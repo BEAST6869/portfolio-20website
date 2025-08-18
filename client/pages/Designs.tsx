@@ -338,7 +338,7 @@ const Designs = () => {
                 <ul className="space-y-2">
                   {skill.skills.map((item) => (
                     <li key={item} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
                       <span className="font-body text-sm text-white/90">{item}</span>
                     </li>
                   ))}
