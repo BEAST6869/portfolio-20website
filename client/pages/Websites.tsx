@@ -76,33 +76,33 @@ const Websites = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full nav-clean z-50">
+      <nav className="fixed top-0 w-full nav-transparent z-50">
         <div className="content-center px-6 py-4">
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="font-heading font-bold text-xl text-foreground hover:scale-105 transition-transform"
+              className="font-heading font-bold text-xl text-white hover:scale-105 transition-transform shimmer"
             >
               Ujjwal Tiwari
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 to="/"
-                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-white/80 hover:text-white transition-colors"
               >
                 Home
               </Link>
               <Link
                 to="/websites"
-                className="font-body text-primary font-semibold"
+                className="font-body text-white font-semibold"
               >
                 Websites
               </Link>
               <Link
                 to="/designs"
-                className="font-body text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-white/80 hover:text-white transition-colors"
               >
                 Designs
               </Link>
@@ -115,7 +115,7 @@ const Websites = () => {
       </nav>
 
       {/* Header */}
-      <section className="section-spacing pt-32 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="section-spacing pt-32 px-6 hero-bg relative overflow-hidden">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -125,7 +125,7 @@ const Websites = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body card-clean px-4 py-2 text-sm"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors font-body glass-white px-4 py-2 text-sm hover:scale-105 shimmer rounded-full"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -138,17 +138,24 @@ const Websites = () => {
             animate="animate"
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-black/10 text-black px-6 py-3 rounded-full mb-8 border border-black/20">
+            <div className="inline-flex items-center gap-3 glass-dark text-white px-6 py-3 rounded-full mb-8 pulse-glow">
               <Code2 className="w-5 h-5" />
               <span className="font-body font-medium">
                 Full-Stack Developer
               </span>
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
-              Web Development
+            <h1 className="font-heading text-6xl md:text-8xl font-bold text-hero mb-8 text-balance leading-tight">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="text-white/90 block text-glow"
+              >
+                Web Development
+              </motion.span>
             </h1>
-            <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
+            <p className="font-body text-xl text-white/90 max-w-4xl mx-auto leading-relaxed text-balance">
               Creating modern, performant websites and web applications using
               cutting-edge technologies. Every project is built with
               scalability, accessibility, and user experience in mind.
@@ -158,7 +165,7 @@ const Websites = () => {
       </section>
 
       {/* Featured Stats */}
-      <section className="py-16 px-6 bg-white border-b">
+      <section className="py-16 px-6 hero-bg border-b border-white/10">
         <div className="content-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -174,12 +181,10 @@ const Websites = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
+                <div className="text-white/80 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -187,7 +192,7 @@ const Websites = () => {
       </section>
 
       {/* Project Display */}
-      <section className="section-spacing px-6">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <div className="max-w-6xl mx-auto">
             {projects.map((project, index) => (
@@ -202,7 +207,7 @@ const Websites = () => {
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="text-center">
-                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-6 py-3 rounded-full border border-black/20">
+                    <div className="inline-flex items-center gap-2 glass-white text-white px-6 py-3 rounded-full border border-white/20">
                       <Zap className="w-5 h-5" />
                       <span className="font-body font-medium">
                         Featured Project
@@ -225,7 +230,7 @@ const Websites = () => {
 
                   {/* Project Info */}
                   <div className="space-y-8">
-                    <div className="flex items-center gap-4 text-sm font-body text-muted-foreground">
+                    <div className="flex items-center gap-4 text-sm font-body text-white/80">
                       <span>{project.category}</span>
                       <span>•</span>
                       <span>{project.year}</span>
@@ -234,25 +239,25 @@ const Websites = () => {
                     </div>
 
                     <div>
-                      <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight">
+                      <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance leading-tight text-white">
                         {project.title}
                       </h2>
 
-                      <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                      <p className="font-body text-lg text-white/90 leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Tech Stack */}
                     <div>
-                      <h3 className="font-heading text-lg font-semibold mb-4">
+                      <h3 className="font-heading text-lg font-semibold mb-4 text-white">
                         Technologies Used
                       </h3>
                       <div className="flex flex-wrap gap-3">
                         {project.tech.map((tech) => (
                           <span
                             key={tech}
-                            className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
+                            className="px-4 py-2 glass-white text-white rounded-full text-sm font-medium border border-white/20"
                           >
                             {tech}
                           </span>
@@ -271,7 +276,7 @@ const Websites = () => {
                       </a>
                       <a
                         href={project.githubUrl}
-                        className="inline-flex items-center justify-center gap-3 card-clean px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border"
+                        className="inline-flex items-center justify-center gap-3 glass-white text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white/20"
                       >
                         <Github className="w-5 h-5" />
                         View Source Code
@@ -286,7 +291,7 @@ const Websites = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="section-spacing px-6 bg-secondary">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -295,10 +300,10 @@ const Websites = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
               Development Expertise
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
               Leveraging modern technologies and best practices to deliver
               exceptional web experiences
             </p>
@@ -314,20 +319,22 @@ const Websites = () => {
                 viewport={{ once: true }}
                 className="card-clean p-8 card-hover text-center"
               >
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 glass-dark rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-3">
+                <h3 className="font-heading text-xl font-bold mb-3 text-white">
                   {tech.category}
                 </h3>
-                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
+                <p className="font-body text-white/80 mb-6 leading-relaxed">
                   {tech.description}
                 </p>
                 <ul className="space-y-2 text-left">
                   {tech.items.map((item) => (
                     <li key={item} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                      <span className="font-body text-sm">{item}</span>
+                      <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
+                      <span className="font-body text-sm text-white">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -338,7 +345,7 @@ const Websites = () => {
       </section>
 
       {/* Development Process */}
-      <section className="section-spacing px-6 bg-white">
+      <section className="section-spacing px-6 hero-bg">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -347,10 +354,10 @@ const Websites = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
               Development Process
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
               A systematic approach to delivering high-quality web solutions
             </p>
           </motion.div>
@@ -390,13 +397,13 @@ const Websites = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                <div className="w-16 h-16 glass-dark text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
                   {phase.step}
                 </div>
-                <h3 className="font-heading text-lg font-bold mb-3">
+                <h3 className="font-heading text-lg font-bold mb-3 text-white">
                   {phase.title}
                 </h3>
-                <p className="font-body text-muted-foreground leading-relaxed text-sm">
+                <p className="font-body text-white/80 leading-relaxed text-sm">
                   {phase.description}
                 </p>
               </motion.div>
@@ -406,7 +413,7 @@ const Websites = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing px-6 bg-primary text-white">
+      <section className="section-spacing px-6 hero-bg text-white relative overflow-hidden">
         <div className="content-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -434,9 +441,9 @@ const Websites = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-white border-t">
+      <footer className="py-12 px-6 hero-bg border-t border-white/10">
         <div className="content-center text-center">
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-white/80">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
             precision.
           </p>

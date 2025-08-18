@@ -341,7 +341,7 @@ const Index = () => {
                       className="flex items-center gap-3"
                     >
                       <motion.div
-                        className="w-2 h-2 bg-glass-medium rounded-full"
+                        className="w-2 h-2 bg-white rounded-full"
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
@@ -626,7 +626,7 @@ const Index = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className="section-spacing px-6 glass-dark text-white relative overflow-hidden"
+        className="section-spacing px-6 hero-bg text-white relative overflow-hidden"
       >
         {/* Animated background patterns */}
         <div className="absolute inset-0">
@@ -688,9 +688,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-surface-3 border-t border-border">
+      <footer className="py-12 px-6 hero-bg border-t border-white/10">
         <div className="content-center text-center">
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-white/80">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
             precision.
           </p>
