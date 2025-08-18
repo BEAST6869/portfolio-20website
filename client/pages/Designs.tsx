@@ -182,9 +182,7 @@ const Designs = () => {
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-white/80 font-medium">
-                  {stat.label}
-                </div>
+                <div className="text-white/80 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -339,7 +337,9 @@ const Designs = () => {
                   {skill.skills.map((item) => (
                     <li key={item} className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="font-body text-sm text-white/90">{item}</span>
+                      <span className="font-body text-sm text-white/90">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
