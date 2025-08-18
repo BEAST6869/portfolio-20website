@@ -222,9 +222,9 @@ const Designs = () => {
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
                   {project.featured && (
-                    <div className="inline-flex items-center gap-2 bg-black/10 text-black px-4 py-2 rounded-full border border-black/20">
-                      <Award className="w-4 h-4" />
-                      <span className="font-body font-medium text-sm">
+                    <div className="inline-flex items-center gap-2 glass-dark text-white px-4 py-2 rounded-full border border-white/20">
+                      <Award className="w-4 h-4 text-white" />
+                      <span className="font-body font-medium text-sm text-white">
                         Featured Project
                       </span>
                     </div>
