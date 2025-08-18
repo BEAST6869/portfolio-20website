@@ -441,9 +441,9 @@ const Websites = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-surface-3 border-t border-border">
+      <footer className="py-12 px-6 glass-dark border-t border-white/10">
         <div className="content-center text-center">
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-white/80">
             © 2024 Ujjwal Tiwari. Crafting digital excellence with passion and
             precision.
           </p>
