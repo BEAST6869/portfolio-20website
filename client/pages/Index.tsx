@@ -427,13 +427,7 @@ const Index = () => {
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
                     viewport={{ once: true }}
-                    className={`inline-block px-3 py-1 ${
-                      index === 0
-                        ? "glass-white text-white"
-                        : index === 1
-                          ? "glass-medium text-white"
-                          : "glass-medium text-white"
-                    } rounded-full text-sm font-medium mb-3 backdrop-blur-md border border-white/20`}
+                    className="inline-block px-3 py-1 glass-dark text-white rounded-full text-sm font-medium mb-3 backdrop-blur-md border border-white/20"
                   >
                     {work.category}
                   </motion.span>
