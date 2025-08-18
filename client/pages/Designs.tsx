@@ -110,7 +110,7 @@ const Designs = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 font-body glass-white px-4 py-2 text-sm hover:scale-105 shimmer"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 font-body glass-white px-4 py-2 text-sm hover:scale-105 shimmer rounded-full"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
