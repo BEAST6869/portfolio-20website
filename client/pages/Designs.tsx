@@ -143,7 +143,7 @@ const Designs = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight text-gradient-primary"
+              className="font-heading text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight text-white shimmer"
             >
               Design Portfolio
             </motion.h1>
