@@ -62,7 +62,7 @@ const Designs = () => {
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="font-heading font-bold text-xl text-foreground hover:scale-105 transition-transform"
+              className="font-heading font-bold text-xl text-white hover:scale-105 transition-transform"
             >
               Ujjwal Tiwari
             </Link>
@@ -81,7 +81,7 @@ const Designs = () => {
               </Link>
               <Link
                 to="/designs"
-                className="font-body text-primary font-semibold"
+                className="font-body text-white font-semibold"
               >
                 Designs
               </Link>
