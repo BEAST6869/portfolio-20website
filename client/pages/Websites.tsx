@@ -286,7 +286,7 @@ const Websites = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="section-spacing px-6 bg-secondary">
+      <section className="section-spacing px-6 work-bg">
         <div className="content-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -295,10 +295,10 @@ const Websites = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-balance text-white">
               Development Expertise
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-body text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
               Leveraging modern technologies and best practices to deliver
               exceptional web experiences
             </p>
@@ -317,17 +317,17 @@ const Websites = () => {
                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-3">
+                <h3 className="font-heading text-xl font-bold mb-3 text-white">
                   {tech.category}
                 </h3>
-                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
+                <p className="font-body text-white/80 mb-6 leading-relaxed">
                   {tech.description}
                 </p>
                 <ul className="space-y-2 text-left">
                   {tech.items.map((item) => (
                     <li key={item} className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                      <span className="font-body text-sm">{item}</span>
+                      <span className="font-body text-sm text-white/90">{item}</span>
                     </li>
                   ))}
                 </ul>
