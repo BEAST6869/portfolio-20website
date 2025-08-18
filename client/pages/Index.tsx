@@ -626,7 +626,7 @@ const Index = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className="section-spacing px-6 glass-dark text-white relative overflow-hidden"
+        className="section-spacing px-6 bg-black text-white relative overflow-hidden"
       >
         {/* Animated background patterns */}
         <div className="absolute inset-0">
