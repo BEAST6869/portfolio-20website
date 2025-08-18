@@ -673,7 +673,7 @@ const Index = () => {
                 transition: { duration: 0.3 },
               }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 glass-white text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 pulse-glow"
+              className="inline-flex items-center gap-3 glass-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 pulse-glow"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
