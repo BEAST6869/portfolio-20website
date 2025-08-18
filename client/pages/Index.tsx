@@ -341,7 +341,7 @@ const Index = () => {
                       className="flex items-center gap-3"
                     >
                       <motion.div
-                        className="w-2 h-2 bg-glass-medium rounded-full"
+                        className="w-2 h-2 bg-white rounded-full"
                         whileHover={{ scale: 2 }}
                         transition={{ duration: 0.2 }}
                       ></motion.div>
