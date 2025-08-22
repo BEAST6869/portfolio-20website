@@ -203,29 +203,59 @@ const Index = () => {
               #1 Most Recommended Designer & Developer
             </motion.p>
             <div className="flex justify-center items-center gap-8 mb-8">
-              {awards.map((award, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.6 + index * 0.15,
-                    ease: [0.6, -0.05, 0.01, 0.99],
-                  }}
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 10,
-                    transition: { duration: 0.2 },
-                  }}
-                  className="awards-badge rounded-full p-3 float pulse-glow"
-                  style={{
-                    animationDelay: `${index * 0.5}s`,
-                  }}
-                >
-                  <award.icon className="w-6 h-6 text-white" />
-                </motion.div>
-              ))}
+              {navigationIcons.map((navItem, index) => {
+                const IconComponent = navItem.icon;
+
+                const iconElement = (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.6 + index * 0.15,
+                      ease: [0.6, -0.05, 0.01, 0.99],
+                    }}
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 10,
+                      transition: { duration: 0.2 },
+                    }}
+                    className="awards-badge rounded-full p-3 float pulse-glow cursor-pointer group relative"
+                    style={{
+                      animationDelay: `${index * 0.5}s`,
+                    }}
+                    onClick={navItem.onClick}
+                  >
+                    <IconComponent className="w-6 h-6 text-white" />
+
+                    {/* Tooltip */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                      whileHover={{ opacity: 1, y: 0, scale: 1 }}
+                      className="absolute top-16 left-1/2 transform -translate-x-1/2
+                                 bg-black/90 backdrop-blur-md text-white px-3 py-2 rounded-lg
+                                 border border-white/20 font-medium text-sm whitespace-nowrap
+                                 pointer-events-none z-10 opacity-0 group-hover:opacity-100
+                                 transition-all duration-300"
+                    >
+                      {navItem.text}
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1
+                                      w-2 h-2 bg-black/90 rotate-45 border-t border-l border-white/20"></div>
+                    </motion.div>
+                  </motion.div>
+                );
+
+                if (navItem.to) {
+                  return (
+                    <Link key={index} to={navItem.to}>
+                      {iconElement}
+                    </Link>
+                  );
+                }
+
+                return iconElement;
+              })}
             </div>
           </motion.div>
 
