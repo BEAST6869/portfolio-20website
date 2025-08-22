@@ -67,26 +67,30 @@ const Index = () => {
     {
       icon: User,
       text: "About Me",
-      description: "Creating digital excellence through thoughtful design and development. Learn about my journey, expertise, and passion for crafting exceptional user experiences.",
-      onClick: () => scrollToSection("about")
+      description:
+        "Creating digital excellence through thoughtful design and development. Learn about my journey, expertise, and passion for crafting exceptional user experiences.",
+      onClick: () => scrollToSection("about"),
     },
     {
       icon: Star,
       text: "Services",
-      description: "Combining creative design with technical expertise to deliver exceptional digital experiences. Figma design and modern web development services.",
-      onClick: () => scrollToSection("services")
+      description:
+        "Combining creative design with technical expertise to deliver exceptional digital experiences. Figma design and modern web development services.",
+      onClick: () => scrollToSection("services"),
     },
     {
       icon: Palette,
       text: "Design",
-      description: "Explore my creative portfolio featuring stunning visual designs, brand identities, infographics, and UI/UX projects that tell compelling stories.",
-      to: "/designs"
+      description:
+        "Explore my creative portfolio featuring stunning visual designs, brand identities, infographics, and UI/UX projects that tell compelling stories.",
+      to: "/designs",
     },
     {
       icon: Code,
       text: "Web Development",
-      description: "Modern, responsive websites and applications built with cutting-edge technologies like React, TypeScript, and performance optimization.",
-      to: "/websites"
+      description:
+        "Modern, responsive websites and applications built with cutting-edge technologies like React, TypeScript, and performance optimization.",
+      to: "/websites",
     },
   ];
 
@@ -250,10 +254,13 @@ const Index = () => {
                       className={`absolute top-20 bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
                                  border border-white/20 max-w-xs w-72
                                  pointer-events-none z-20 ${
-                                   index === 0 ? 'left-0 transform translate-x-4' :
-                                   index === 1 ? 'left-1/6 transform -translate-x-12' :
-                                   index === 2 ? 'left-1/2 transform -translate-x-8' :
-                                   'right-0 transform -translate-x-4'
+                                   index === 0
+                                     ? "left-0 transform translate-x-4"
+                                     : index === 1
+                                       ? "left-1/6 transform -translate-x-12"
+                                       : index === 2
+                                         ? "left-1/2 transform -translate-x-8"
+                                         : "right-0 transform -translate-x-4"
                                  }`}
                     >
                       <h4 className="font-heading font-bold text-lg mb-2 text-white">
@@ -264,12 +271,17 @@ const Index = () => {
                       </p>
 
                       {/* Arrow pointing up */}
-                      <div className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
-                                        index === 0 ? 'left-8 transform -translate-x-1/2' :
-                                        index === 1 ? 'left-16 transform -translate-x-1/2' :
-                                        index === 2 ? 'left-12 transform -translate-x-1/2' :
-                                        'right-8 transform translate-x-1/2'
-                                      }`}></div>
+                      <div
+                        className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
+                          index === 0
+                            ? "left-8 transform -translate-x-1/2"
+                            : index === 1
+                              ? "left-16 transform -translate-x-1/2"
+                              : index === 2
+                                ? "left-12 transform -translate-x-1/2"
+                                : "right-8 transform translate-x-1/2"
+                        }`}
+                      ></div>
 
                       {/* Subtle glow effect */}
                       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/5 to-white/10 pointer-events-none"></div>
@@ -314,10 +326,13 @@ const Index = () => {
                           className={`absolute top-20 bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
                                      border border-white/20 max-w-xs w-72
                                      pointer-events-none z-20 ${
-                                       index === 0 ? 'left-0 transform translate-x-4' :
-                                       index === 1 ? 'left-1/6 transform -translate-x-12' :
-                                       index === 2 ? 'left-1/2 transform -translate-x-8' :
-                                       'right-0 transform -translate-x-4'
+                                       index === 0
+                                         ? "left-0 transform translate-x-4"
+                                         : index === 1
+                                           ? "left-1/6 transform -translate-x-12"
+                                           : index === 2
+                                             ? "left-1/2 transform -translate-x-8"
+                                             : "right-0 transform -translate-x-4"
                                      }`}
                         >
                           <h4 className="font-heading font-bold text-lg mb-2 text-white">
@@ -328,12 +343,17 @@ const Index = () => {
                           </p>
 
                           {/* Arrow pointing up */}
-                          <div className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
-                                            index === 0 ? 'left-8 transform -translate-x-1/2' :
-                                            index === 1 ? 'left-16 transform -translate-x-1/2' :
-                                            index === 2 ? 'left-12 transform -translate-x-1/2' :
-                                            'right-8 transform translate-x-1/2'
-                                          }`}></div>
+                          <div
+                            className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
+                              index === 0
+                                ? "left-8 transform -translate-x-1/2"
+                                : index === 1
+                                  ? "left-16 transform -translate-x-1/2"
+                                  : index === 2
+                                    ? "left-12 transform -translate-x-1/2"
+                                    : "right-8 transform translate-x-1/2"
+                            }`}
+                          ></div>
 
                           {/* Subtle glow effect */}
                           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/5 to-white/10 pointer-events-none"></div>
