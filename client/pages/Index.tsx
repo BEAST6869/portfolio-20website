@@ -252,7 +252,7 @@ const Index = () => {
                                  pointer-events-none z-20 ${
                                    index === 0 ? 'left-0 transform translate-x-4' :
                                    index === 1 ? 'left-1/3 transform -translate-x-20' :
-                                   index === 2 ? 'right-1/3 transform translate-x-20' :
+                                   index === 2 ? 'left-2/3 transform -translate-x-4' :
                                    'right-0 transform -translate-x-4'
                                  }`}
                     >
