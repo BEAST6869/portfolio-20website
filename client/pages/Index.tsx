@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
