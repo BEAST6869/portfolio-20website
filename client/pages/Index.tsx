@@ -53,11 +53,34 @@ const Index = () => {
     transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
   };
 
-  const awards = [
-    { icon: Award, text: "Top Rated Designer" },
-    { icon: Star, text: "5.0 Rating" },
-    { icon: Users, text: "50+ Projects" },
-    { icon: Code, text: "Modern Stack" },
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navigationIcons = [
+    {
+      icon: User,
+      text: "About Me",
+      onClick: () => scrollToSection("about")
+    },
+    {
+      icon: Star,
+      text: "Services",
+      onClick: () => scrollToSection("services")
+    },
+    {
+      icon: Palette,
+      text: "Design",
+      to: "/designs"
+    },
+    {
+      icon: Code,
+      text: "Web Development",
+      to: "/websites"
+    },
   ];
 
   const services = [
