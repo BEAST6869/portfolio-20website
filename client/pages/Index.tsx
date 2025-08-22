@@ -266,8 +266,8 @@ const Index = () => {
                       {/* Arrow pointing up */}
                       <div className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
                                         index === 0 ? 'left-8 transform -translate-x-1/2' :
-                                        index === 1 ? 'left-16 transform -translate-x-1/2' :
-                                        index === 2 ? 'right-16 transform translate-x-1/2' :
+                                        index === 1 ? 'left-20 transform -translate-x-1/2' :
+                                        index === 2 ? 'right-20 transform translate-x-1/2' :
                                         'right-8 transform translate-x-1/2'
                                       }`}></div>
 
