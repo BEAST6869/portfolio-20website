@@ -11,6 +11,7 @@ import {
   Code,
   Palette,
 } from "lucide-react";
+import IconNavigation from "../components/IconNavigation";
 
 const Index = () => {
   const fadeInUp = {
