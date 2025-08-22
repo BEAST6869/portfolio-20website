@@ -64,21 +64,25 @@ const Index = () => {
     {
       icon: User,
       text: "About Me",
+      description: "Creating digital excellence through thoughtful design and development. Learn about my journey, expertise, and passion for crafting exceptional user experiences.",
       onClick: () => scrollToSection("about")
     },
     {
       icon: Star,
       text: "Services",
+      description: "Combining creative design with technical expertise to deliver exceptional digital experiences. Figma design and modern web development services.",
       onClick: () => scrollToSection("services")
     },
     {
       icon: Palette,
       text: "Design",
+      description: "Explore my creative portfolio featuring stunning visual designs, brand identities, infographics, and UI/UX projects that tell compelling stories.",
       to: "/designs"
     },
     {
       icon: Code,
       text: "Web Development",
+      description: "Modern, responsive websites and applications built with cutting-edge technologies like React, TypeScript, and performance optimization.",
       to: "/websites"
     },
   ];
