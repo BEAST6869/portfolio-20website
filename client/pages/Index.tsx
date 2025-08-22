@@ -328,8 +328,12 @@ const Index = () => {
                           </p>
 
                           {/* Arrow pointing up */}
-                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1
-                                          w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20"></div>
+                          <div className={`absolute bottom-full w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20 translate-y-1 ${
+                                            index === 0 ? 'left-8 transform -translate-x-1/2' :
+                                            index === 1 ? 'left-16 transform -translate-x-1/2' :
+                                            index === 2 ? 'right-16 transform translate-x-1/2' :
+                                            'right-8 transform translate-x-1/2'
+                                          }`}></div>
 
                           {/* Subtle glow effect */}
                           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/5 to-white/10 pointer-events-none"></div>
