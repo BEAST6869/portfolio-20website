@@ -119,9 +119,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Icon Navigation */}
-      <IconNavigation />
-
       {/* Navigation */}
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
