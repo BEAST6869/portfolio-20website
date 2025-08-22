@@ -271,13 +271,58 @@ const Index = () => {
 
                 if (navItem.to) {
                   return (
-                    <Link
-                      key={index}
-                      to={navItem.to}
-                      onMouseEnter={() => setHoveredIcon(index)}
-                      onMouseLeave={() => setHoveredIcon(null)}
-                    >
-                      {iconElement}
+                    <Link key={index} to={navItem.to}>
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
+                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                        transition={{
+                          duration: 0.8,
+                          delay: 0.6 + index * 0.15,
+                          ease: [0.6, -0.05, 0.01, 0.99],
+                        }}
+                        whileHover={{
+                          scale: 1.2,
+                          rotate: 10,
+                          transition: { duration: 0.2 },
+                        }}
+                        className="awards-badge rounded-full p-3 float pulse-glow cursor-pointer relative"
+                        style={{
+                          animationDelay: `${index * 0.5}s`,
+                        }}
+                        onMouseEnter={() => setHoveredIcon(index)}
+                        onMouseLeave={() => setHoveredIcon(null)}
+                      >
+                        <IconComponent className="w-6 h-6 text-white" />
+
+                        {/* Enhanced Tooltip with Description */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                          animate={{
+                            opacity: hoveredIcon === index ? 1 : 0,
+                            y: hoveredIcon === index ? 0 : 20,
+                            scale: hoveredIcon === index ? 1 : 0.8,
+                          }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
+                          className="absolute top-20 left-1/2 transform -translate-x-1/2
+                                     bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
+                                     border border-white/20 max-w-xs w-72
+                                     pointer-events-none z-20"
+                        >
+                          <h4 className="font-heading font-bold text-lg mb-2 text-white">
+                            {navItem.text}
+                          </h4>
+                          <p className="font-body text-white/90 text-sm leading-relaxed">
+                            {navItem.description}
+                          </p>
+
+                          {/* Arrow pointing up */}
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-1
+                                          w-3 h-3 bg-black/95 rotate-45 border-t border-l border-white/20"></div>
+
+                          {/* Subtle glow effect */}
+                          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/5 to-white/10 pointer-events-none"></div>
+                        </motion.div>
+                      </motion.div>
                     </Link>
                   );
                 }
