@@ -247,10 +247,14 @@ const Index = () => {
                         scale: hoveredIcon === index ? 1 : 0.8,
                       }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
-                      className="absolute top-20 left-1/2 transform -translate-x-1/2
-                                 bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
+                      className={`absolute top-20 bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
                                  border border-white/20 max-w-xs w-72
-                                 pointer-events-none z-20"
+                                 pointer-events-none z-20 ${
+                                   index === 0 ? 'left-0 transform translate-x-4' :
+                                   index === 1 ? 'left-1/4 transform -translate-x-8' :
+                                   index === 2 ? 'right-1/4 transform translate-x-8' :
+                                   'right-0 transform -translate-x-4'
+                                 }`}
                     >
                       <h4 className="font-heading font-bold text-lg mb-2 text-white">
                         {navItem.text}
