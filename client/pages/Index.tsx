@@ -228,22 +228,29 @@ const Index = () => {
                       rotate: 10,
                       transition: { duration: 0.2 },
                     }}
-                    className="awards-badge rounded-full p-3 float pulse-glow cursor-pointer group relative"
+                    className="awards-badge rounded-full p-3 float pulse-glow cursor-pointer relative"
                     style={{
                       animationDelay: `${index * 0.5}s`,
                     }}
                     onClick={navItem.onClick}
+                    onMouseEnter={() => setHoveredIcon(index)}
+                    onMouseLeave={() => setHoveredIcon(null)}
                   >
                     <IconComponent className="w-6 h-6 text-white" />
 
                     {/* Enhanced Tooltip with Description */}
                     <motion.div
                       initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                      animate={{
+                        opacity: hoveredIcon === index ? 1 : 0,
+                        y: hoveredIcon === index ? 0 : 20,
+                        scale: hoveredIcon === index ? 1 : 0.8,
+                      }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
                       className="absolute top-20 left-1/2 transform -translate-x-1/2
                                  bg-black/95 backdrop-blur-md text-white p-4 rounded-xl
                                  border border-white/20 max-w-xs w-72
-                                 pointer-events-none z-20 opacity-0 group-hover:opacity-100
-                                 transition-all duration-500 ease-out group-hover:scale-100 scale-95"
+                                 pointer-events-none z-20"
                     >
                       <h4 className="font-heading font-bold text-lg mb-2 text-white">
                         {navItem.text}
@@ -264,7 +271,12 @@ const Index = () => {
 
                 if (navItem.to) {
                   return (
-                    <Link key={index} to={navItem.to}>
+                    <Link
+                      key={index}
+                      to={navItem.to}
+                      onMouseEnter={() => setHoveredIcon(index)}
+                      onMouseLeave={() => setHoveredIcon(null)}
+                    >
                       {iconElement}
                     </Link>
                   );
